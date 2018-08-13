@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1534085030531.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "E65D6503",
+    "lastKnownWriteTime" : 1534085282,
+    "last_content_update" : 1534085282491,
+    "path" : "~/Dropbox/manuscripts/pkg-vip/RJwrapper.tex",
+    "project_path" : "RJwrapper.tex",
+    "properties" : {
+        "cursorPosition" : "4,26",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "tex"
+}

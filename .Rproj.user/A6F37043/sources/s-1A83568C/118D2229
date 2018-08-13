@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1534085042043.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "118D2229",
+    "lastKnownWriteTime" : 1534086025,
+    "last_content_update" : 1534086025987,
+    "path" : "~/Dropbox/manuscripts/pkg-vip/pkg-vip.tex",
+    "project_path" : "pkg-vip.tex",
+    "properties" : {
+        "cursorPosition" : "7,265",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "tex"
+}
