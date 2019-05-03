@@ -1,15 +1,96 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[{R Core Team}(2016)]{R}
-{R Core Team}.
-\newblock \emph{R: A Language and Environment for Statistical Computing}.
-\newblock R Foundation for Statistical Computing, Vienna, Austria, 2016.
-\newblock URL \url{https://www.R-project.org/}.
-\newblock {ISBN} 3-900051-07-0.
+\bibitem[Breiman(1996)]{bagging-breiman-1996}
+L.~Breiman.
+\newblock Bagging predictors.
+\newblock \emph{Machine Learning}, 8\penalty0 (2):\penalty0 209--218, 1996.
+\newblock URL \url{https://doi.org/10.1023/A:1018054314350}.
+
+\bibitem[Breiman(2001)]{random-breiman-2001}
+L.~Breiman.
+\newblock Random forests.
+\newblock \emph{Machine Learning}, 45\penalty0 (1):\penalty0 5--32, 2001.
+\newblock URL \url{https://doi.org/10.1023/A:1010933404324}.
+
+\bibitem[Friedman(1991)]{multivariate-friedman-1991}
+J.~H. Friedman.
+\newblock Multivariate adaptive regression splines.
+\newblock \emph{The Annals of Statistics}, 19\penalty0 (1):\penalty0 1--67,
+  1991.
+\newblock URL \url{https://doi.org/10.1214/aos/1176347963}.
+
+\bibitem[Garson(1991)]{interpreting-garson-1991}
+D.~G. Garson.
+\newblock Interpreting neural-network connection weights.
+\newblock \emph{Artificial Intelligence Expert}, 6\penalty0 (4):\penalty0
+  46--51, 1991.
+
+\bibitem[Gedeon(1997)]{data-gedeon-1997}
+T.~Gedeon.
+\newblock Data mining of inputs: Analysing magnitude and functional measures.
+\newblock \emph{International Journal of Neural Systems}, 24\penalty0
+  (2):\penalty0 123--140, 1997.
+\newblock URL \url{https://doi.org/10.1007/s10994-006-6226-1}.
+
+\bibitem[Goh(1995)]{back-goh-1995}
+A.~Goh.
+\newblock Back-propagation neural networks for modeling complex systems.
+\newblock \emph{Artificial Intelligence in Engineering}, 9\penalty0
+  (3):\penalty0 143--151, 1995.
+\newblock \doi{http://dx.doi.org/10.1016/0954-1810(94)00011-S}.
+
+\bibitem[Goldstein et~al.(2015)Goldstein, Kapelner, Bleich, and
+  Pitkin]{goldstein-peeking-2015}
+A.~Goldstein, A.~Kapelner, J.~Bleich, and E.~Pitkin.
+\newblock Peeking inside the black box: Visualizing statistical learning with
+  plots of individual conditional expectation.
+\newblock \emph{Journal of Computational and Graphical Statistics}, 24\penalty0
+  (1):\penalty0 44--65, 2015.
+\newblock URL \url{https://doi.org/10.1080/10618600.2014.907095}.
+
+\bibitem[Greenwell(2017)]{greenwell-pdp-2017}
+B.~M. Greenwell.
+\newblock pdp: An r package for constructing partial dependence plots.
+\newblock \emph{The R Journal}, 9\penalty0 (1):\penalty0 421--436, 2017.
+\newblock URL
+  \url{https://journal.r-project.org/archive/2017/RJ-2017-016/index.html}.
+
+\bibitem[Greenwell et~al.(2018)Greenwell, Boehmke, and
+  McCarthy]{greenwell-simple-2018}
+B.~M. Greenwell, B.~C. Boehmke, and A.~J. McCarthy.
+\newblock A simple and effective model-based variable importance measure.
+\newblock \emph{arXiv preprint arXiv:1805.04755}, 2018.
+
+\bibitem[Leisch and Dimitriadou(2012)]{mlbench-pkg}
+F.~Leisch and E.~Dimitriadou.
+\newblock \emph{mlbench: Machine Learning Benchmark Problems}, 2012.
+\newblock URL \url{https://CRAN.R-project.org/package=mlbench}.
+\newblock R package version 2.1-1.
+
+\bibitem[Milborrow(2017)]{earth-pkg}
+S.~Milborrow.
+\newblock \emph{earth: Multivariate Adaptive Regression Splines}, 2017.
+\newblock URL \url{https://CRAN.R-project.org/package=earth}.
+\newblock R package version 4.5.0.
+
+\bibitem[Olden et~al.(2004)Olden, Joy, and Death]{accurate-olden-2004}
+J.~D. Olden, M.~K. Joy, and R.~G. Death.
+\newblock An accurate comparison of methods for quantifying variable importance
+  in artificial neural networks using simulated data.
+\newblock \emph{Ecological Modelling}, 178\penalty0 (3):\penalty0 389--397,
+  2004.
+\newblock \doi{http://dx.doi.org/10.1016/j.ecolmodel.2004.03.013}.
+
+\bibitem[Venables and Ripley(2002)]{nnet-pkg}
+W.~N. Venables and B.~D. Ripley.
+\newblock \emph{Modern Applied Statistics with S}.
+\newblock Springer, New York, fourth edition, 2002.
+\newblock URL \url{http://www.stats.ox.ac.uk/pub/MASS4}.
+\newblock ISBN 0-387-95457-0.
 
 \end{thebibliography}
