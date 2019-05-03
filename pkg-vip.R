@@ -208,3 +208,41 @@ dev.off()
 set.seed(403)  # for reproducibility
 vi(pp, method = "permute", target = "y", metric = "rsquared",
    pred_fun = predict, nsim = 10)
+
+# First, compute a tibble of variable importance scores using any method
+var_imp <- vi(rfo, method = "permute", metric = "rmse", target = "y")
+
+# Next, convert to an html-based data table with sparklines
+vit(var_imp, fit = rfo)
+
+library(SuperLearner)
+
+boston <- pdp::boston
+X <- subset(boston, select = -cmedv)
+
+sl_lib <- c("SL.xgboost", "SL.ranger", "SL.glmnet", "SL.ksvm")
+
+# Stack an XGBoost, RF, Lasso, and an SVM
+set.seed(840)
+sl <- SuperLearner(Y = boston$cmedv, X = X, 
+                   SL.library = sl_lib)
+
+pfun <- function(object, newdata) {
+  predict(object, newdata = newdata)$pred
+}
+
+set.seed(278)
+vip(sl, method = "permute", train = X, target = boston$cmedv, metric = "rmse",
+    pred_fun = pfun, nsim = 10)
+
+library(doParallel) # load the parallel backend
+cl <- makeCluster(8) # use 8 workers
+registerDoParallel(cl) # register the parallel backend
+set.seed(278)
+res <- vi(sl, method = "permute", train = X, target = boston$cmedv, 
+          metric = "rmse", pred_fun = pfun, nsim = 10, parallel = TRUE, 
+          paropts = list(.packages = "SuperLearner"))
+stopCluster(cl) # good practice
+
+vip(res)
+
