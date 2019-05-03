@@ -220,19 +220,33 @@ library(SuperLearner)
 boston <- pdp::boston
 X <- subset(boston, select = -cmedv)
 
-sl_lib <- c("SL.xgboost", "SL.ranger", "SL.glmnet", "SL.ksvm")
+# Load the data and assign column names
+url <- paste0("http://archive.ics.uci.edu/ml/machine-learning-databases/",
+              "00291/airfoil_self_noise.dat")
+airfoil <- read.table(url, header = FALSE)
+names(airfoil) <- c(
+  "frequency", 
+  "angle_of_attack", 
+  "chord_length", 
+  "free_stream_velocity", 
+  "suction_side_displacement_thickness", 
+  "scaled_sound_pressure_level"
+)
+X <- subset(airfoil, select = -scaled_sound_pressure_level)
+y <- airfoil$scaled_sound_pressure_level
+sl_lib <- c("SL.xgboost", "SL.ranger", "SL.glmnet")
 
 # Stack an XGBoost, RF, Lasso, and an SVM
 set.seed(840)
-sl <- SuperLearner(Y = boston$cmedv, X = X, 
-                   SL.library = sl_lib)
+sl <- SuperLearner(Y = y, X = X, SL.library = sl_lib)
+sl
 
 pfun <- function(object, newdata) {
   predict(object, newdata = newdata)$pred
 }
 
 set.seed(278)
-vip(sl, method = "permute", train = X, target = boston$cmedv, metric = "rmse",
+vip(sl, method = "permute", train = X, target = y, metric = "rmse",
     pred_fun = pfun, nsim = 10)
 
 library(doParallel) # load the parallel backend
