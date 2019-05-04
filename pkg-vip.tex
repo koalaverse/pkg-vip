@@ -20,6 +20,7 @@ In the era of “big data”, it is becoming more of a challenge to not only bui
   \item Need a good motivating example (e.g., airfoil example from arXiv paper using the \pkg{SuperLearner} package).
   \item Better discussion of function arguments, especially for permutation approach.
   \item Parallel examples for PDP-, ICE-, and permuataion-based approaches.
+  \item Example showing how to supply your own custom metric function.
 
 \end{itemize}
 
@@ -462,11 +463,43 @@ vit(var_imp, fit = rfo)
 
 
 % ------------------------------------------------------------------------------
-\section{Ames housing example}
+\section{Predict the sale price for a home}
 % ------------------------------------------------------------------------------
 
-TBD.
+For illustration, we'll use the Ames housing data set---a modernized and expanded version of the often cited Boston Housing data set. These data are available in the \CRANpkg{AmesHousing} package
+\citep{AmesHousing-pkg}. %Using the R package \CRANpkg{h2o} \citep{h2o-pkg}, we trained and tuned a GBM using 10-fold cross-validation. The model fit is reasonable, with a cross-validated (pseudo) \(R^2\) of 91.5\%. Like other tree-based ensembles, GBMs have a natural way of defining VI which was described in Section \ref{sec:model-specific}. The VI scores for these data are displayed in the left side of Figure \ref{fig:ames-gbm-vip}. This plot indicates that the overall quality of the material and finish of the house (\code{Overall\_Qual}), physical location within the Ames city limits (\code{Neighborhood}), and the above grade (ground) living area (\code{Gr\_Liv\_Area}) are highly associated with the logarithm of the sales price (\code{Log\_Sale\_Price}). The VI scores also indicate that type of heating (\code{Heating}), the number of kitchens above grade (\code{Kitchen\_AbvGr}), and the low quality finished square feet for all floors (\code{Low\_Qual\_Fin\_SF}) have little association with \code{Log\_Sale\_Price}. (Note that the bottom two features in Figure \ref{fig:ames-gbm-vip}, \code{Street} and \code{Utilities}, have a VI score of exactly zero; in other words, they were never used to partion the data at any point in the GBM ensemble.)
 
+\begin{example}
+# Load the Ames housing data
+ames <- AmesHousing::make_ames()
+X <- subset(ames, select = -Sale_Price)
+y <- ames$Sale_Price
+
+# Load required packages
+library(SuperLearner)
+
+# Stack models
+set.seed(840)
+learners <- c("SL.xgboost", "SL.ranger", "SL.earth", "SL.glmnet", "SL.ksvm")
+sl <- SuperLearner(Y = y, X = X, SL.library = learners)
+
+# Prediction wrappers
+pfun <- function(object, newdata) {
+  predict(object, newdata = newdata)$pred
+}
+parfun <- function(object, newdata) {
+  mean(predict(object, newdata = newdata)$pred)
+}
+
+# Permutation-based feature importance
+set.seed(278)
+imp <- vi(sl, method = "permute", train = X, target = y, metric = "rmse",
+          pred_wrapper = pfun, nsim = 5)
+
+# Add sparline representation of feature effects
+add_sparklines(imp[1L:2L, ], fit = sl, pred.fun = parfun, train = X, digits = 2, 
+               trim.outliers = TRUE, grid.resolution = 20)
+\end{example}
 
 % ------------------------------------------------------------------------------
 \section{Summary}

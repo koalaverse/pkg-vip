@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.4.16)  2 MAY 2019 21:48
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.4.16)  3 MAY 2019 22:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1027,14 +1027,14 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 19.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 27.
-LaTeX Font Info:    Try loading font information for TS1+zi4 on input line 41.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 28.
+LaTeX Font Info:    Try loading font information for TS1+zi4 on input line 42.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
 File: ts1zi4.fd 2018/01/14 TS1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `TS1/zi4/m/n' will be
-(Font)              scaled to size 9.18004pt on input line 41.
+(Font)              scaled to size 9.18004pt on input line 42.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1045,7 +1045,7 @@ Missing character: There is no … in font t1-zi4r-0!
 ]
 Missing character: There is no 𝑡 in font pplr8t!
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 66.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 67.
 Missing character: There is no 𝑡 in font pplr8t!
 Missing character: There is no 𝑖 in font pplr8t!
 Missing character: There is no ˆ in font pplr8t!
@@ -1059,10 +1059,10 @@ File: figures/vi-plots.pdf Graphic file (type pdf)
 
 
 Package natbib Warning: Citation `vip-pkg' on page 2 undefined on input line 11
-4.
+5.
 
 [2] [3]
-Overfull \hbox (1.47157pt too wide) in paragraph at lines 166--167
+Overfull \hbox (1.47157pt too wide) in paragraph at lines 167--168
 []\T1/ppl/m/n/9 Notice how the \T1/zi4/m/n/9 vi() \T1/ppl/m/n/9 func-tion al-wa
 ys re-turns a tib-ble with two columns: \T1/zi4/m/n/9 Variable \T1/ppl/m/n/9 an
 d \T1/zi4/m/n/9 Importance\T1/ppl/m/n/9 .
@@ -1081,14 +1081,14 @@ Missing character: There is no ’ in font pplr8t!
 Missing character: There is no ’ in font pplr8t!
 
 
-LaTeX Warning: Reference `' on page 6 undefined on input line 274.
+LaTeX Warning: Reference `' on page 6 undefined on input line 275.
 
 [6]
 File: figures/pdp-ppr.pdf Graphic file (type pdf)
 <use figures/pdp-ppr.pdf>
  [7]
 
-LaTeX Warning: Reference `fig:vip-pp-nn' on page 8 undefined on input line 344.
+LaTeX Warning: Reference `fig:vip-pp-nn' on page 8 undefined on input line 345.
 
 
 File: figures/vip-ppr-nn.pdf Graphic file (type pdf)
@@ -1104,24 +1104,24 @@ File: figures/vip-ice-ppr-nn.pdf Graphic file (type pdf)
  [10]
 File: figures/sparklines.png Graphic file (type bmp)
 <figures/sparklines.png>
- (./RJwrapper.bbl (./RJwrapper.brf)
+ [11] (./RJwrapper.bbl (./RJwrapper.brf)
 \tf@brf=\write6
 \openout6 = `RJwrapper.brf'.
 
- [11]))
+) [12])
 
 Package natbib Warning: There were undefined citations.
 
-[12]
+[13]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 24.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 24.
  (./RJwrapper.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 24.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 24.
 Package rerunfilecheck Info: File `RJwrapper.out' has not changed.
-(rerunfilecheck)             Checksum: 572E1F0A01353125B12BC2557EE982C5.
+(rerunfilecheck)             Checksum: 8BD0889955E4DDA2E7E7E10ED321E4C8.
 Package rerunfilecheck Info: File `RJwrapper.brf' has not changed.
-(rerunfilecheck)             Checksum: C73DA27E446FAA87E5AB11FB03ED92B9.
+(rerunfilecheck)             Checksum: 5B31984C6E4ACE559605D26D4D688A13.
 
 
 LaTeX Warning: There were undefined references.
@@ -1129,12 +1129,12 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 24.
  ) 
 Here is how much of TeX's memory you used:
- 24230 strings out of 492970
- 425962 string characters out of 6133938
- 509214 words of memory out of 5000000
- 27804 multiletter control sequences out of 15000+600000
+ 24236 strings out of 492970
+ 426088 string characters out of 6133938
+ 511263 words of memory out of 5000000
+ 27810 multiletter control sequences out of 15000+600000
  26210 words of font info for 53 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 62i,12n,94p,1425b,619s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,94p,1425b,621s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on RJwrapper.pdf (12 pages).
+Output written on RJwrapper.pdf (13 pages).

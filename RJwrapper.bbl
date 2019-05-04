@@ -1,4 +1,4 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{14}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -65,6 +65,12 @@ B.~M. Greenwell.
 B.~M. Greenwell, B.~C. Boehmke, and A.~J. McCarthy.
 \newblock A simple and effective model-based variable importance measure.
 \newblock \emph{arXiv preprint arXiv:1805.04755}, 2018.
+
+\bibitem[Kuhn(2017)]{AmesHousing-pkg}
+M.~Kuhn.
+\newblock \emph{AmesHousing: The Ames Iowa Housing Data}, 2017.
+\newblock URL \url{https://CRAN.R-project.org/package=AmesHousing}.
+\newblock R package version 0.0.3.
 
 \bibitem[Leisch and Dimitriadou(2012)]{mlbench-pkg}
 F.~Leisch and E.~Dimitriadou.

@@ -135,12 +135,14 @@ library(nnet)
 set.seed(0803)
 nn <- nnet(y ~ ., data = trn, size = 7, decay = 0.1, linout = TRUE, maxit = 500)
 
-# # VIPs
-# p1 <- vip(nn, method = "garson")
-# p2 <- vip(nn, method = "olsen")
-# 
-# # Figure X
-# grid.arrange(p1, p2, nrow = 1)
+# VIPs
+p1 <- vip(nn)
+p2 <- vip(nn, olden = FALSE)
+
+# Figure X
+pdf("figures/vip-model-ppr-nn.pdf", width = 7, height = 3.5)
+grid.arrange(p1, p2, nrow = 1)
+dev.off()
 
 # Load required packages
 library(pdp)
@@ -244,10 +246,14 @@ sl
 pfun <- function(object, newdata) {
   predict(object, newdata = newdata)$pred
 }
+parfun <- function(object, newdata) {
+  mean(predict(object, newdata = newdata)$pred)
+}
 
 set.seed(278)
-vip(sl, method = "permute", train = X, target = y, metric = "rmse",
-    pred_fun = pfun, nsim = 10)
+var_imp <- vi(sl, method = "permute", train = X, target = y, metric = "rmse",
+              pred_fun = pfun, nsim = 10)
+vit(var_imp, fit = sl, pred.fun = parfun, train = X)
 
 library(doParallel) # load the parallel backend
 cl <- makeCluster(8) # use 8 workers
