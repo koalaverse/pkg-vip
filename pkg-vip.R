@@ -1,3 +1,5 @@
+# Setup ------------------------------------------------------------------------
+
 # Simulate training data
 set.seed(101)  # for reproducibility
 trn <- as.data.frame(mlbench::mlbench.friedman1(500))  # ?mlbench.friedman1
@@ -12,6 +14,9 @@ library(rpart)          # for fitting CART-like decision trees
 library(randomForest)   # for fitting random forests
 library(xgboost)        # for fitting GBMs
 library(vip)            # for variable importance plots
+
+
+# Introduction -----------------------------------------------------------------
 
 # Fit a single regression tree
 tree <- rpart(y ~ ., data = trn)
@@ -140,7 +145,7 @@ p1 <- vip(nn)
 p2 <- vip(nn, olden = FALSE)
 
 # Figure X
-pdf("figures/vip-model-ppr-nn.pdf", width = 7, height = 3.5)
+pdf("figures/vip-model-nn.pdf", width = 7, height = 3.5)
 grid.arrange(p1, p2, nrow = 1)
 dev.off()
 
@@ -197,9 +202,9 @@ dev.off()
 # Plot VI scores
 set.seed(2021)  # for reproducibility
 p1 <- vip(pp, method = "permute", target = "y", metric = "rsquared",
-          pred_fun = predict) + ggtitle("PPR")
+          pred_wrapper = predict) + ggtitle("PPR")
 p2 <- vip(nn, method = "permute", target = "y", metric = "rsquared",
-          pred_fun = predict) + ggtitle("NN")
+          pred_wrapper = predict) + ggtitle("NN")
 
 # Figure X
 pdf("figures/vip-permute-ppr.pdf", width = 7, height = 3.5)
@@ -209,13 +214,13 @@ dev.off()
 # Use 10 Monte Carlo reps
 set.seed(403)  # for reproducibility
 vi(pp, method = "permute", target = "y", metric = "rsquared",
-   pred_fun = predict, nsim = 10)
+   pred_wrapper = predict, nsim = 10)
 
 # First, compute a tibble of variable importance scores using any method
 var_imp <- vi(rfo, method = "permute", metric = "rmse", target = "y")
 
 # Next, convert to an html-based data table with sparklines
-vit(var_imp, fit = rfo)
+add_sparklines(var_imp, fit = rfo)
 
 library(SuperLearner)
 
@@ -252,17 +257,63 @@ parfun <- function(object, newdata) {
 
 set.seed(278)
 var_imp <- vi(sl, method = "permute", train = X, target = y, metric = "rmse",
-              pred_fun = pfun, nsim = 10)
-vit(var_imp, fit = sl, pred.fun = parfun, train = X)
+              pred_wrapper = pfun, nsim = 10)
+add_sparklines(var_imp, fit = sl, pred.fun = parfun, train = X)
 
 library(doParallel) # load the parallel backend
 cl <- makeCluster(8) # use 8 workers
 registerDoParallel(cl) # register the parallel backend
 set.seed(278)
 res <- vi(sl, method = "permute", train = X, target = boston$cmedv, 
-          metric = "rmse", pred_fun = pfun, nsim = 10, parallel = TRUE, 
+          metric = "rmse", pred_wrapper = pfun, nsim = 10, parallel = TRUE, 
           paropts = list(.packages = "SuperLearner"))
 stopCluster(cl) # good practice
 
 vip(res)
 
+
+# Predict the sale price for a home --------------------------------------------
+
+# Load the Ames housing data
+ames <- AmesHousing::make_ames()
+X <- subset(ames, select = -Sale_Price)
+y <- ames$Sale_Price
+
+# Load required packages
+library(SuperLearner)
+
+# List of base learners
+learners <- c("SL.xgboost", "SL.ranger", "SL.earth", "SL.glmnet", "SL.ksvm")
+
+# Stack models
+set.seed(840)
+ctrl <- SuperLearner.CV.control(V = 5L, shuffle = TRUE)
+sl <- SuperLearner(Y = y, X = X, SL.library = learners, verbose = TRUE,
+                   cvControl = ctrl)
+sl
+
+# Prediction wrapper functions
+imp_fun <- function(object, newdata) {
+  predict(object, newdata = newdata)$pred
+}
+par_fun <- function(object, newdata) {
+  mean(predict(object, newdata = newdata)$pred)
+}
+
+# Setup parallel backend
+library(doParallel) # load the parallel backend
+cl <- makeCluster(5) # use 5 workers
+registerDoParallel(cl) # register the parallel backend
+
+# Permutation-based feature importance
+set.seed(278)
+var_imp <- vi(sl, method = "permute", train = X, target = y, metric = "rmse",
+              pred_wrapper = imp_fun, nsim = 5, parallel = TRUE)
+
+# Add sparline representation of feature effects
+add_sparklines(var_imp[1L:10L, ], fit = sl, pred.fun = par_fun, train = X, 
+               digits = 2, verbose = TRUE, trim.outliers = TRUE, 
+               grid.resolution = 20, parallel = TRUE)
+
+# Shut down cluster
+stopCluster(cl)

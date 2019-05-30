@@ -1,9 +1,16 @@
-\begin{thebibliography}{14}
+\begin{thebibliography}{21}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Biecek(2018)]{DALEX-pkg}
+P.~Biecek.
+\newblock Dalex: Explainers for complex predictive models in r.
+\newblock \emph{Journal of Machine Learning Research}, 19\penalty0
+  (84):\penalty0 1--5, 2018.
+\newblock URL \url{http://jmlr.org/papers/v19/18-416.html}.
 
 \bibitem[Breiman(1996)]{bagging-breiman-1996}
 L.~Breiman.
@@ -16,6 +23,13 @@ L.~Breiman.
 \newblock Random forests.
 \newblock \emph{Machine Learning}, 45\penalty0 (1):\penalty0 5--32, 2001.
 \newblock URL \url{https://doi.org/10.1023/A:1010933404324}.
+
+\bibitem[Cleveland(1979)]{robust-cleveland-1979}
+W.~S. Cleveland.
+\newblock Robust locally weighted regression and smoothing scatterplots.
+\newblock \emph{Journal of the American Statistical Association}, 74\penalty0
+  (368):\penalty0 829--836, 1979.
+\newblock \doi{10.1080/01621459.1979.10481038}.
 
 \bibitem[Friedman(1991)]{multivariate-friedman-1991}
 J.~H. Friedman.
@@ -66,11 +80,24 @@ B.~M. Greenwell, B.~C. Boehmke, and A.~J. McCarthy.
 \newblock A simple and effective model-based variable importance measure.
 \newblock \emph{arXiv preprint arXiv:1805.04755}, 2018.
 
-\bibitem[Kuhn(2017)]{AmesHousing-pkg}
+\bibitem[Kuhn(2017{\natexlab{a}})]{AmesHousing-pkg}
 M.~Kuhn.
-\newblock \emph{AmesHousing: The Ames Iowa Housing Data}, 2017.
+\newblock \emph{AmesHousing: The Ames Iowa Housing Data}, 2017{\natexlab{a}}.
 \newblock URL \url{https://CRAN.R-project.org/package=AmesHousing}.
 \newblock R package version 0.0.3.
+
+\bibitem[Kuhn(2017{\natexlab{b}})]{caret-pkg}
+M.~Kuhn.
+\newblock \emph{caret: Classification and Regression Training},
+  2017{\natexlab{b}}.
+\newblock URL \url{https://CRAN.R-project.org/package=caret}.
+\newblock R package version 6.0-76.
+
+\bibitem[Kuhn and Johnson(2013)]{applied-kuhn-2013}
+M.~Kuhn and K.~Johnson.
+\newblock \emph{Applied Predictive Modeling}.
+\newblock SpringerLink : B{\"u}cher. Springer New York, 2013.
+\newblock ISBN 9781461468493.
 
 \bibitem[Leisch and Dimitriadou(2012)]{mlbench-pkg}
 F.~Leisch and E.~Dimitriadou.
@@ -83,6 +110,19 @@ S.~Milborrow.
 \newblock \emph{earth: Multivariate Adaptive Regression Splines}, 2017.
 \newblock URL \url{https://CRAN.R-project.org/package=earth}.
 \newblock R package version 4.5.0.
+
+\bibitem[Molnar et~al.(2018)Molnar, Bischl, and Casalicchio]{iml-pkg}
+C.~Molnar, B.~Bischl, and G.~Casalicchio.
+\newblock iml: An r package for interpretable machine learning.
+\newblock \emph{JOSS}, 3\penalty0 (26):\penalty0 786, 2018.
+\newblock \doi{10.21105/joss.00786}.
+\newblock URL \url{http://joss.theoj.org/papers/10.21105/joss.00786}.
+
+\bibitem[Müller and Wickham(2019)]{tibble-pkg}
+K.~Müller and H.~Wickham.
+\newblock \emph{tibble: Simple Data Frames}, 2019.
+\newblock URL \url{https://CRAN.R-project.org/package=tibble}.
+\newblock R package version 2.1.1.
 
 \bibitem[Olden et~al.(2004)Olden, Joy, and Death]{accurate-olden-2004}
 J.~D. Olden, M.~K. Joy, and R.~G. Death.
@@ -98,5 +138,12 @@ W.~N. Venables and B.~D. Ripley.
 \newblock Springer, New York, fourth edition, 2002.
 \newblock URL \url{http://www.stats.ox.ac.uk/pub/MASS4}.
 \newblock ISBN 0-387-95457-0.
+
+\bibitem[Wickham(2016)]{ggplot2-pkg}
+H.~Wickham.
+\newblock \emph{ggplot2: Elegant Graphics for Data Analysis}.
+\newblock Springer-Verlag New York, 2016.
+\newblock ISBN 978-3-319-24277-4.
+\newblock URL \url{https://ggplot2.tidyverse.org}.
 
 \end{thebibliography}
