@@ -16,7 +16,7 @@ library(xgboost)        # for fitting GBMs
 library(vip)            # for variable importance plots
 
 
-# Introduction -----------------------------------------------------------------
+# Model-specific VI ------------------------------------------------------------
 
 # Fit a single regression tree
 tree <- rpart(y ~ ., data = trn)
@@ -102,8 +102,7 @@ vi(backward)
 
 # Plot VI scores
 pdf("figures/vip-step.pdf", width = 7, height = 4.326)
-vip(backward, num_features = length(coef(backward)), 
-    bar = FALSE, horizontal = FALSE)
+vip(backward, num_features = length(coef(backward)))
 dev.off()
 
 # Load required packages
@@ -141,8 +140,8 @@ set.seed(0803)
 nn <- nnet(y ~ ., data = trn, size = 7, decay = 0.1, linout = TRUE, maxit = 500)
 
 # VIPs
-p1 <- vip(nn)
-p2 <- vip(nn, olden = FALSE)
+p1 <- vip(nn, type = "garson")
+p2 <- vip(nn, type = "olden")
 
 # Figure X
 pdf("figures/vip-model-nn.pdf", width = 7, height = 3.5)
@@ -207,7 +206,7 @@ p2 <- vip(nn, method = "permute", target = "y", metric = "rsquared",
           pred_wrapper = predict) + ggtitle("NN")
 
 # Figure X
-pdf("figures/vip-permute-ppr.pdf", width = 7, height = 3.5)
+pdf("figures/vip-permute-ppr-nn.pdf", width = 7, height = 3.5)
 grid.arrange(p1, p2, ncol = 2)
 dev.off()
 
@@ -215,6 +214,28 @@ dev.off()
 set.seed(403)  # for reproducibility
 vi(pp, method = "permute", target = "y", metric = "rsquared",
    pred_wrapper = predict, nsim = 10)
+
+# Custom loss function: mean absolute error
+mae <- function(actual, predicted) {
+  mean(abs(actual - predicted))
+}
+
+# Figure X
+set.seed(2321)  # for reproducibility
+pdf("figures/vip-permute-nn-mae.pdf", width = 7, height = 4.326)
+vip(nn, method = "permute", target = "y", metric = mae, 
+    smaller_is_better = TRUE, pred_wrapper = nnet:::predict.nnet) + 
+  ggtitle("Custom loss function: MAE")
+dev.off()
+
+# Figure X
+set.seed(2327)  # for reproducibility
+pdf("figures/vip-permute-nn-sample.pdf", width = 7, height = 4.326)
+vip(nn, method = "permute", 
+    train = trn[sample(nrow(trn), size = 400), ],  # sample 400 observations
+    target = "y", metric = "rmse") +
+  ggtitle("Using a random subset of training data")
+dev.off()
 
 # First, compute a tibble of variable importance scores using any method
 var_imp <- vi(rfo, method = "permute", metric = "rmse", target = "y")
