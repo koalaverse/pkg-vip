@@ -24,6 +24,9 @@
 \citation{applied-kuhn-2013}
 \citation{robust-cleveland-1979}
 \citation{applied-kuhn-2013}
+\citation{mlr-pkg}
+\citation{gbm-pkg}
+\citation{vip-pkg}
 \HyPL@Entry{0<</S/D>>}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Variable Importance Plots: An Introduction to the {\normalfont  \fontseries  {b}\selectfont  vip} Package}{1}{section*.1}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Introduction}{1}{section.2.1}}
@@ -31,21 +34,18 @@
 \@writefile{brf}{\backcite{iml-pkg}{{1}{2.1}{section.2.1}}}
 \@writefile{brf}{\backcite{R6-pkg}{{1}{2.1}{section.2.1}}}
 \@writefile{brf}{\backcite{DALEX-pkg}{{1}{2.1}{section.2.1}}}
-\citation{mlr-pkg}
-\citation{gbm-pkg}
-\citation{vip-pkg}
+\@writefile{brf}{\backcite{caret-pkg}{{1}{2.1}{section.2.1}}}
+\@writefile{brf}{\backcite{applied-kuhn-2013}{{1}{2.1}{section.2.1}}}
+\@writefile{brf}{\backcite{robust-cleveland-1979}{{1}{2.1}{section.2.1}}}
+\@writefile{brf}{\backcite{applied-kuhn-2013}{{1}{2.1}{section.2.1}}}
+\@writefile{brf}{\backcite{mlr-pkg}{{1}{2.1}{section.2.1}}}
+\@writefile{brf}{\backcite{gbm-pkg}{{1}{2.1}{section.2.1}}}
 \citation{tibble-pkg}
 \citation{ggplot2-pkg}
 \citation{greenwell-simple-2018}
 \citation{multivariate-friedman-1991}
 \citation{bagging-breiman-1996}
 \citation{mlbench-pkg}
-\@writefile{brf}{\backcite{caret-pkg}{{2}{2.1}{section.2.1}}}
-\@writefile{brf}{\backcite{applied-kuhn-2013}{{2}{2.1}{section.2.1}}}
-\@writefile{brf}{\backcite{robust-cleveland-1979}{{2}{2.1}{section.2.1}}}
-\@writefile{brf}{\backcite{applied-kuhn-2013}{{2}{2.1}{section.2.1}}}
-\@writefile{brf}{\backcite{mlr-pkg}{{2}{2.1}{section.2.1}}}
-\@writefile{brf}{\backcite{gbm-pkg}{{2}{2.1}{section.2.1}}}
 \@writefile{brf}{\backcite{vip-pkg}{{2}{2.1}{section.2.1}}}
 \@writefile{brf}{\backcite{tibble-pkg}{{2}{2.1}{section.2.1}}}
 \@writefile{brf}{\backcite{ggplot2-pkg}{{2}{2.1}{section.2.1}}}
@@ -59,11 +59,13 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Model-based VIPs for the three different tree-based models fit to the simulated Friedman data..\relax }}{4}{figure.caption.2}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:vi-plots}{{1}{4}{Model-based VIPs for the three different tree-based models fit to the simulated Friedman data..\relax }{figure.caption.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Illustrating various options available in \code  {vip()}.\relax }}{5}{figure.caption.3}}
+\newlabel{fig:dot-plot}{{2}{5}{Illustrating various options available in \code {vip()}.\relax }{figure.caption.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Linear models}{5}{subsection.2.3.2}}
 \citation{multivariate-friedman-1991}
 \citation{earth-pkg}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Illustrating various options available in \code  {vip()}.\relax }}{6}{figure.caption.3}}
-\newlabel{fig:dot-plot}{{2}{6}{Illustrating various options available in \code {vip()}.\relax }{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Example VIP from a linear model fit to the simulated Friedman data.\relax }}{6}{figure.caption.4}}
+\newlabel{fig:vip-step}{{3}{6}{Example VIP from a linear model fit to the simulated Friedman data.\relax }{figure.caption.4}{}}
 \@writefile{brf}{\backcite{multivariate-friedman-1991}{{6}{2.3.2}{figure.caption.4}}}
 \@writefile{brf}{\backcite{earth-pkg}{{6}{2.3.2}{figure.caption.4}}}
 \citation{interpreting-garson-1991}
@@ -71,32 +73,30 @@
 \citation{accurate-olden-2004}
 \citation{data-gedeon-1997}
 \citation{nnet-pkg}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Example VIP from a linear model fit to the simulated Friedman data.\relax }}{7}{figure.caption.4}}
-\newlabel{fig:vip-step}{{3}{7}{Example VIP from a linear model fit to the simulated Friedman data.\relax }{figure.caption.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Example VIP from a MARS model fit to the simulated Friedman data.\relax }}{7}{figure.caption.5}}
 \newlabel{fig:vip-earth}{{4}{7}{Example VIP from a MARS model fit to the simulated Friedman data.\relax }{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Neural networks}{7}{subsection.2.3.3}}
+\@writefile{brf}{\backcite{interpreting-garson-1991}{{7}{2.3.3}{subsection.2.3.3}}}
+\@writefile{brf}{\backcite{back-goh-1995}{{7}{2.3.3}{subsection.2.3.3}}}
+\@writefile{brf}{\backcite{accurate-olden-2004}{{7}{2.3.3}{subsection.2.3.3}}}
+\@writefile{brf}{\backcite{data-gedeon-1997}{{7}{2.3.3}{subsection.2.3.3}}}
+\@writefile{brf}{\backcite{nnet-pkg}{{7}{2.3.3}{subsection.2.3.3}}}
 \citation{greenwell-simple-2018}
 \citation{greenwell-pdp-2017}
 \citation{greenwell-pdp-2017}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Neural networks}{8}{subsection.2.3.3}}
-\@writefile{brf}{\backcite{interpreting-garson-1991}{{8}{2.3.3}{subsection.2.3.3}}}
-\@writefile{brf}{\backcite{back-goh-1995}{{8}{2.3.3}{subsection.2.3.3}}}
-\@writefile{brf}{\backcite{accurate-olden-2004}{{8}{2.3.3}{subsection.2.3.3}}}
-\@writefile{brf}{\backcite{data-gedeon-1997}{{8}{2.3.3}{subsection.2.3.3}}}
-\@writefile{brf}{\backcite{nnet-pkg}{{8}{2.3.3}{subsection.2.3.3}}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Example VIPs from a single-hidden-layer NN fit to the simulated Friedman data.\relax }}{8}{figure.caption.6}}
 \newlabel{fig:vip-earth}{{5}{8}{Example VIPs from a single-hidden-layer NN fit to the simulated Friedman data.\relax }{figure.caption.6}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.4}Model-agnostic VI}{8}{section.2.4}}
 \@writefile{brf}{\backcite{greenwell-simple-2018}{{8}{2.4}{section.2.4}}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}PDP method}{8}{subsection.2.4.1}}
+\@writefile{brf}{\backcite{greenwell-pdp-2017}{{8}{2.4.1}{subsection.2.4.1}}}
+\@writefile{brf}{\backcite{greenwell-pdp-2017}{{8}{2.4.1}{subsection.2.4.1}}}
 \citation{goldstein-peeking-2015}
-\@writefile{brf}{\backcite{greenwell-pdp-2017}{{9}{2.4.1}{subsection.2.4.1}}}
-\@writefile{brf}{\backcite{greenwell-pdp-2017}{{9}{2.4.1}{subsection.2.4.1}}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces PDPs of main effects in the PPR model fit to the simulated Friedman data..\relax }}{9}{figure.caption.7}}
 \newlabel{fig:pdp-ppr}{{6}{9}{PDPs of main effects in the PPR model fit to the simulated Friedman data..\relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces PDP-based feature importance for the PPR and NN models fit to the simulated Friedman data..\relax }}{9}{figure.caption.8}}
+\newlabel{fig:pdp-ppr-nn}{{7}{9}{PDP-based feature importance for the PPR and NN models fit to the simulated Friedman data..\relax }{figure.caption.8}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}ICE curve method}{9}{subsection.2.4.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces PDP-based feature importance for the PPR and NN models fit to the simulated Friedman data..\relax }}{10}{figure.caption.8}}
-\newlabel{fig:pdp-ppr-nn}{{7}{10}{PDP-based feature importance for the PPR and NN models fit to the simulated Friedman data..\relax }{figure.caption.8}{}}
 \@writefile{brf}{\backcite{goldstein-peeking-2015}{{10}{2.4.2}{subsection.2.4.2}}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces ICE curves for each feature in the PPR model fit to the simulated Friedman data. The red curve represents the PDP (i.e., the averaged ICE curves).\relax }}{10}{figure.caption.9}}
 \newlabel{fig:ice-ppr}{{8}{10}{ICE curves for each feature in the PPR model fit to the simulated Friedman data. The red curve represents the PDP (i.e., the averaged ICE curves).\relax }{figure.caption.9}{}}
@@ -104,46 +104,53 @@
 \citation{fisher-model-2018}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces ICE-based feature importance for the PPR and NN models fit to the simulated Friedman data..\relax }}{11}{figure.caption.10}}
 \newlabel{fig:vip-ice-ppr-nn}{{9}{11}{ICE-based feature importance for the PPR and NN models fit to the simulated Friedman data..\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces PDPs for all ten features reconstructed from the \code  {"pdp"} attribute of the \code  {vis} object.\relax }}{11}{figure.caption.11}}
+\newlabel{fig:pdp-from-attr}{{10}{11}{PDPs for all ten features reconstructed from the \code {"pdp"} attribute of the \code {vis} object.\relax }{figure.caption.11}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}Permutation method}{11}{subsection.2.4.3}}
 \@writefile{brf}{\backcite{random-breiman-2001}{{11}{2.4.3}{subsection.2.4.3}}}
 \@writefile{brf}{\backcite{fisher-model-2018}{{11}{2.4.3}{subsection.2.4.3}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Permutation-based feature importance for the PPR and NN models fit to the simulated Friedman data.\relax }}{12}{figure.caption.11}}
-\newlabel{fig:vip-permute-ppr-nn}{{10}{12}{Permutation-based feature importance for the PPR and NN models fit to the simulated Friedman data.\relax }{figure.caption.11}{}}
+\citation{molnar-2019-iml}
+\@writefile{lop}{\contentsline {algorithm}{\numberline {1}{\ignorespaces A simple algorithm for constructing permutation-based variable importance scores. \relax }}{12}{algorithm.1}}
+\newlabel{alg:permute}{{1}{12}{A simple algorithm for constructing permutation-based variable importance scores. \relax }{algorithm.1}{}}
+\@writefile{brf}{\backcite{molnar-2019-iml}{{12}{2.4.3}{algorithm.1}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Permutation-based feature importance for the PPR and NN models fit to the simulated Friedman data.\relax }}{13}{figure.caption.12}}
+\newlabel{fig:vip-permute-ppr-nn}{{11}{13}{Permutation-based feature importance for the PPR and NN models fit to the simulated Friedman data.\relax }{figure.caption.12}{}}
 \citation{molnar-2019-iml}
 \citation{DT-pkg}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, permutation importance is based on the MAE metric.\relax }}{13}{figure.caption.12}}
-\newlabel{fig:vip-nn-mae}{{11}{13}{Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, permutation importance is based on the MAE metric.\relax }{figure.caption.12}{}}
-\@writefile{brf}{\backcite{molnar-2019-iml}{{13}{2.4.3}{figure.caption.12}}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.5}Use sparklines to characterize feature effects}{13}{section.2.5}}
-\@writefile{brf}{\backcite{DT-pkg}{{13}{2.5}{section.2.5}}}
 \citation{AmesHousing-pkg}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, permutation importance is based on the MAE metric.\relax }}{14}{figure.caption.13}}
+\newlabel{fig:vip-nn-mae}{{12}{14}{Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, permutation importance is based on the MAE metric.\relax }{figure.caption.13}{}}
+\@writefile{brf}{\backcite{molnar-2019-iml}{{14}{2.4.3}{figure.caption.13}}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Use sparklines to characterize feature effects}{14}{section.2.5}}
+\@writefile{brf}{\backcite{DT-pkg}{{14}{2.5}{section.2.5}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, permutation importance is based on a random sample of 400 training observations.\relax }}{15}{figure.caption.14}}
+\newlabel{fig:vip-nn-mae}{{13}{15}{Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, permutation importance is based on a random sample of 400 training observations.\relax }{figure.caption.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces VIP with sparkline representation of feature effects fit to the simulated Friedman data.\relax }}{15}{figure.caption.15}}
+\newlabel{fig:sparklines}{{14}{15}{VIP with sparkline representation of feature effects fit to the simulated Friedman data.\relax }{figure.caption.15}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}Predict the sale price for a home}{15}{section.2.6}}
+\@writefile{brf}{\backcite{AmesHousing-pkg}{{15}{2.6}{section.2.6}}}
 \citation{SuperLearner-pkg}
 \citation{xgboost-pkg}
 \citation{ranger-pkg}
 \citation{earth-pkg}
 \citation{glmnet-pkg}
 \citation{kernlab-pkg}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, permutation importance is based on a random sample of 400 training observations.\relax }}{14}{figure.caption.13}}
-\newlabel{fig:vip-nn-mae}{{12}{14}{Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, permutation importance is based on a random sample of 400 training observations.\relax }{figure.caption.13}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.6}Predict the sale price for a home}{14}{section.2.6}}
-\@writefile{brf}{\backcite{AmesHousing-pkg}{{14}{2.6}{section.2.6}}}
-\@writefile{brf}{\backcite{SuperLearner-pkg}{{14}{2.6}{section.2.6}}}
-\@writefile{brf}{\backcite{xgboost-pkg}{{14}{2.6}{section.2.6}}}
-\@writefile{brf}{\backcite{ranger-pkg}{{14}{2.6}{section.2.6}}}
-\@writefile{brf}{\backcite{earth-pkg}{{14}{2.6}{section.2.6}}}
-\@writefile{brf}{\backcite{glmnet-pkg}{{14}{2.6}{section.2.6}}}
-\@writefile{brf}{\backcite{kernlab-pkg}{{14}{2.6}{section.2.6}}}
 \citation{plyr-pkg}
 \citation{foreach-pkg}
 \citation{doParallel-pkg}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces VIP with sparkline representation of feature effects fit to the simulated Friedman data.\relax }}{15}{figure.caption.14}}
-\newlabel{fig:sparklines}{{13}{15}{VIP with sparkline representation of feature effects fit to the simulated Friedman data.\relax }{figure.caption.14}{}}
-\@writefile{brf}{\backcite{plyr-pkg}{{15}{2.6}{section.2.6}}}
-\@writefile{brf}{\backcite{foreach-pkg}{{15}{2.6}{section.2.6}}}
-\bibdata{pkg-vip}
+\@writefile{brf}{\backcite{SuperLearner-pkg}{{16}{2.6}{section.2.6}}}
+\@writefile{brf}{\backcite{xgboost-pkg}{{16}{2.6}{section.2.6}}}
+\@writefile{brf}{\backcite{ranger-pkg}{{16}{2.6}{section.2.6}}}
+\@writefile{brf}{\backcite{earth-pkg}{{16}{2.6}{section.2.6}}}
+\@writefile{brf}{\backcite{glmnet-pkg}{{16}{2.6}{section.2.6}}}
+\@writefile{brf}{\backcite{kernlab-pkg}{{16}{2.6}{section.2.6}}}
+\@writefile{brf}{\backcite{plyr-pkg}{{16}{2.6}{section.2.6}}}
+\@writefile{brf}{\backcite{foreach-pkg}{{16}{2.6}{section.2.6}}}
 \@writefile{brf}{\backcite{doParallel-pkg}{{16}{2.6}{section.2.6}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces VIP with sparkline representation of feature effects for the top ten features from a Super Learner fit to the Ames housing data.\relax }}{16}{figure.caption.15}}
-\newlabel{fig:sparklines}{{14}{16}{VIP with sparkline representation of feature effects for the top ten features from a Super Learner fit to the Ames housing data.\relax }{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces VIP with sparkline representation of feature effects for the top ten features from a Super Learner fit to the Ames housing data.\relax }}{17}{figure.caption.16}}
+\newlabel{fig:sparklines}{{15}{17}{VIP with sparkline representation of feature effects for the top ten features from a Super Learner fit to the Ames housing data.\relax }{figure.caption.16}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.7}Summary}{17}{section.2.7}}
+\bibdata{pkg-vip}
 \bibcite{DALEX-pkg}{{1}{2018}{{Biecek}}{{}}}
 \bibcite{mlr-pkg}{{2}{2016}{{Bischl et~al.}}{{Bischl, Lang, Kotthoff, Schiffner, Richter, Studerus, Casalicchio, and Jones}}}
 \bibcite{bagging-breiman-1996}{{3}{1996}{{Breiman}}{{}}}
@@ -163,9 +170,9 @@
 \bibcite{greenwell-simple-2018}{{17}{2018}{{Greenwell et~al.}}{{Greenwell, Boehmke, and McCarthy}}}
 \bibcite{kernlab-pkg}{{18}{2004}{{Karatzoglou et~al.}}{{Karatzoglou, Smola, Hornik, and Zeileis}}}
 \bibcite{AmesHousing-pkg}{{19}{2017{a}}{{Kuhn}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.8}Acknowledgments}{18}{section.2.8}}
 \bibcite{caret-pkg}{{20}{2017{b}}{{Kuhn}}{{}}}
 \bibcite{applied-kuhn-2013}{{21}{2013}{{Kuhn and Johnson}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.7}Summary}{17}{section.2.7}}
 \bibcite{mlbench-pkg}{{22}{2012}{{Leisch and Dimitriadou}}{{}}}
 \bibcite{earth-pkg}{{23}{2017}{{Milborrow}}{{}}}
 \bibcite{molnar-2019-iml}{{24}{2019}{{Molnar}}{{}}}

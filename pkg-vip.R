@@ -198,6 +198,17 @@ pdf("figures/vip-ice-ppr-nn.pdf", width = 7, height = 3.5)
 grid.arrange(p1, p2, ncol = 2)
 dev.off()
 
+
+vis <- vi(pp, method = "pdp")
+vis
+# Figure X
+pdf("figures/pdp-from-attr.pdf", width = 10, height = 5)
+par(mfrow = c(2, 5))
+for (name in paste0("x.", 1:10)) {
+  plot(attr(vis, which = "pdp")[[name]], type = "l", ylim = c(9, 19), las = 1)
+}
+dev.off()
+
 # Plot VI scores
 set.seed(2021)  # for reproducibility
 p1 <- vip(pp, method = "permute", target = "y", metric = "rsquared",
