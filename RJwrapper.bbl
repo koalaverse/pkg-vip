@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{38}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -32,6 +32,14 @@ L.~Breiman.
 \newblock Random forests.
 \newblock \emph{Machine Learning}, 45\penalty0 (1):\penalty0 5--32, 2001.
 \newblock URL \url{https://doi.org/10.1023/A:1010933404324}.
+
+\bibitem[Breiman et~al.(1984)Breiman, Friedman, and Charles
+  J.~Stone]{classification-breiman-1984}
+L.~Breiman, J.~Friedman, and R.~A.~O. Charles J.~Stone.
+\newblock \emph{Classification and Regression Trees}.
+\newblock The Wadsworth and Brooks-Cole statistics-probability series. Taylor
+  \& Francis, 1984.
+\newblock ISBN 9780412048418.
 
 \bibitem[Chang(2019)]{R6-pkg}
 W.~Chang.
@@ -120,6 +128,13 @@ B.~M. Greenwell.
 B.~M. Greenwell, B.~C. Boehmke, and A.~J. McCarthy.
 \newblock A simple and effective model-based variable importance measure.
 \newblock \emph{arXiv preprint arXiv:1805.04755}, 2018.
+
+\bibitem[Hastie et~al.(2009)Hastie, Tibshirani, and
+  Friedman]{hastie-elements-2009}
+T.~Hastie, R.~Tibshirani, and J.~Friedman.
+\newblock \emph{The Elements of Statistical Learning: Data Mining, Inference,
+  and Prediction, Second Edition}.
+\newblock Springer Series in Statistics. Springer-Verlag, 2009.
 
 \bibitem[Karatzoglou et~al.(2004)Karatzoglou, Smola, Hornik, and
   Zeileis]{kernlab-pkg}

@@ -3,6 +3,7 @@
 # Simulate training data
 set.seed(101)  # for reproducibility
 trn <- as.data.frame(mlbench::mlbench.friedman1(500))  # ?mlbench.friedman1
+names(trn) <- gsub("^x\\.", replacement = "X", x = names(trn))
 
 # Inspect data
 tibble::as_tibble(trn)
@@ -88,16 +89,16 @@ vi(backward)
 #> # A tibble: 21 x 3
 #>    Variable Importance Sign 
 #>    <chr>         <dbl> <chr>
-#>  1 x.4           14.2  POS  
-#>  2 x.2            7.31 POS  
-#>  3 x.1            5.63 POS  
-#>  4 x.5            5.21 POS  
-#>  5 x.3:x.5        2.46 POS  
-#>  6 x.1:x.10       2.41 NEG  
-#>  7 x.2:x.6        2.41 NEG  
-#>  8 x.1:x.5        2.37 NEG  
-#>  9 x.10           2.21 POS  
-#> 10 x.3:x.4        2.01 NEG  
+#>  1 X4           14.2  POS  
+#>  2 X2            7.31 POS  
+#>  3 X1            5.63 POS  
+#>  4 X5            5.21 POS  
+#>  5 X3:X5        2.46 POS  
+#>  6 X1:X10       2.41 NEG  
+#>  7 X2:X6        2.41 NEG  
+#>  8 X1:X5        2.37 NEG  
+#>  9 X10           2.21 POS  
+#> 10 X3:X4        2.01 NEG  
 #> # … with 11 more rows
 
 # Plot VI scores
@@ -116,16 +117,16 @@ vi(mars)
 #> # A tibble: 10 x 2
 #>    Variable Importance
 #>    <chr>         <dbl>
-#>  1 x.4           100  
-#>  2 x.1            83.2
-#>  3 x.2            83.2
-#>  4 x.5            59.3
-#>  5 x.3            43.5
-#>  6 x.6             0  
-#>  7 x.7             0  
-#>  8 x.8             0  
-#>  9 x.9             0  
-#> 10 x.10            0
+#>  1 X4           100  
+#>  2 X1            83.2
+#>  3 X2            83.2
+#>  4 X5            59.3
+#>  5 X3            43.5
+#>  6 X6             0  
+#>  7 X7             0  
+#>  8 X8             0  
+#>  9 X9             0  
+#> 10 X10            0
 
 # Plot VI scores
 pdf("figures/vip-earth.pdf", width = 7, height = 4.326)
@@ -148,6 +149,9 @@ pdf("figures/vip-model-nn.pdf", width = 7, height = 3.5)
 grid.arrange(p1, p2, nrow = 1)
 dev.off()
 
+
+# PDP method -------------------------------------------------------------------
+
 # Load required packages
 library(pdp)
 
@@ -156,7 +160,7 @@ library(pdp)
 pp <- ppr(y ~ ., data = trn, nterms = 11)  
 
 # PDPs for all 10 features
-features <- paste0("x.", 1:10)
+features <- paste0("X", 1:10)
 pdps <- lapply(features, FUN = function(feature) {
   pd <- partial(pp, pred.var = feature)
   autoplot(pd) + 
@@ -176,6 +180,9 @@ p2 <- vip(nn, method = "pdp") + ggtitle("NN")
 pdf("figures/vip-ppr-nn.pdf", width = 7, height = 3.5)
 grid.arrange(p1, p2, nrow = 1)
 dev.off()
+
+
+# ICE curve method -------------------------------------------------------------
 
 # ICE curves for all 10 features
 ice_curves <- lapply(features, FUN = function(feature) {
@@ -204,10 +211,13 @@ vis
 # Figure X
 pdf("figures/pdp-from-attr.pdf", width = 10, height = 5)
 par(mfrow = c(2, 5))
-for (name in paste0("x.", 1:10)) {
+for (name in paste0("X", 1:10)) {
   plot(attr(vis, which = "pdp")[[name]], type = "l", ylim = c(9, 19), las = 1)
 }
 dev.off()
+
+
+# Permutation method -----------------------------------------------------------
 
 # Plot VI scores
 set.seed(2021)  # for reproducibility
@@ -248,11 +258,17 @@ vip(nn, method = "permute",
   ggtitle("Using a random subset of training data")
 dev.off()
 
+
+# Use sparklines to characterize feature effects -------------------------------
+
 # First, compute a tibble of variable importance scores using any method
 var_imp <- vi(rfo, method = "permute", metric = "rmse", target = "y")
 
 # Next, convert to an html-based data table with sparklines
 add_sparklines(var_imp, fit = rfo)
+
+
+# Ames housing example ---------------------------------------------------------
 
 library(SuperLearner)
 
