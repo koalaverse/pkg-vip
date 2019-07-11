@@ -589,6 +589,23 @@ vip(nn, method = "permute",
   \label{fig:vip-nn-mae}
 \end{figure}
 
+When using the permutation method with \code{nsim > 1}, the default is to keep all the permutation scores as an attribute called \code{"raw\_scores"}; you can turn this behavior off by setting \code{keep = FALSE} in the call to \code{vi\_permute()}, \code{vi()}, or \code{vip()}. If \code{keep = TRUE} and \code{nsim > 1}, you can request all permutation scores to be plotted by setting \code{all\_permutation = TRUE} in the call to \code{vip()} as demonstrated in the code chunk below (see Figure~\ref{fig:vip-nn-mae}). This let's you visually inspect the variability in the permutation scores within each feature.
+
+\begin{example}
+# Figure X
+set.seed(8264)  # for reproducibility
+vip(nn, method = "permute", target = "y", metric = "rmse",
+    all_permutations = TRUE) +
+  ggtitle("Plotting all permutation scores")
+\end{example}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=1\linewidth]{figures/vip-permute-nn-all}
+  \caption{Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, all the permutation importance scores (points) are displayed for each feature along with their average (bars).}
+  \label{fig:vip-permute-nn-all}
+\end{figure}
+
 
 % ------------------------------------------------------------------------------
 \section{Use sparklines to characterize feature effects}

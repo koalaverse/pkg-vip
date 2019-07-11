@@ -14,7 +14,8 @@
 \fi}
 \global\let\hyper@last\relax 
 \gdef\HyperFirstAtBeginDocument#1{#1}
-\providecommand*\HyPL@Entry[1]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
 \bibstyle{abbrvnat}
 \citation{molnar-2019-iml}
 \citation{iml-pkg}
@@ -27,7 +28,6 @@
 \citation{mlr-pkg}
 \citation{gbm-pkg}
 \citation{vip-pkg}
-\HyPL@Entry{0<</S/D>>}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Variable Importance Plots: An Introduction to the {\normalfont  \fontseries  {b}\selectfont  vip} Package}{1}{section*.1}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Introduction}{1}{section.2.1}}
 \@writefile{brf}{\backcite{molnar-2019-iml}{{1}{2.1}{section.2.1}}}
@@ -122,42 +122,45 @@
 \newlabel{fig:vip-permute-ppr-nn}{{11}{13}{Permutation-based feature importance for the PPR and NN models fit to the simulated Friedman data.\relax }{figure.caption.12}{}}
 \citation{molnar-2019-iml}
 \citation{DT-pkg}
-\citation{AmesHousing-pkg}
 \@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, permutation importance is based on the MAE metric.\relax }}{14}{figure.caption.13}}
 \newlabel{fig:vip-nn-mae}{{12}{14}{Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, permutation importance is based on the MAE metric.\relax }{figure.caption.13}{}}
 \@writefile{brf}{\backcite{molnar-2019-iml}{{14}{2.4.3}{figure.caption.13}}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.5}Use sparklines to characterize feature effects}{14}{section.2.5}}
 \@writefile{brf}{\backcite{DT-pkg}{{14}{2.5}{section.2.5}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, permutation importance is based on a random sample of 400 training observations.\relax }}{15}{figure.caption.14}}
+\newlabel{fig:vip-nn-mae}{{13}{15}{Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, permutation importance is based on a random sample of 400 training observations.\relax }{figure.caption.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, all the permutation importance scores (points) are displayed for each feature along with their average (bars).\relax }}{15}{figure.caption.15}}
+\newlabel{fig:vip-permute-nn-all}{{14}{15}{Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, all the permutation importance scores (points) are displayed for each feature along with their average (bars).\relax }{figure.caption.15}{}}
+\citation{AmesHousing-pkg}
 \citation{SuperLearner-pkg}
 \citation{xgboost-pkg}
 \citation{ranger-pkg}
 \citation{glmnet-pkg}
 \citation{kernlab-pkg}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, permutation importance is based on a random sample of 400 training observations.\relax }}{15}{figure.caption.14}}
-\newlabel{fig:vip-nn-mae}{{13}{15}{Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, permutation importance is based on a random sample of 400 training observations.\relax }{figure.caption.14}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.6}Ames housing example}{15}{section.2.6}}
-\@writefile{brf}{\backcite{AmesHousing-pkg}{{15}{2.6}{section.2.6}}}
-\@writefile{brf}{\backcite{SuperLearner-pkg}{{15}{2.6}{section.2.6}}}
-\@writefile{brf}{\backcite{xgboost-pkg}{{15}{2.6}{section.2.6}}}
-\@writefile{brf}{\backcite{ranger-pkg}{{15}{2.6}{section.2.6}}}
-\@writefile{brf}{\backcite{glmnet-pkg}{{15}{2.6}{section.2.6}}}
-\@writefile{brf}{\backcite{kernlab-pkg}{{15}{2.6}{section.2.6}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces VIP with sparkline representation of feature effects fit to the simulated Friedman data.\relax }}{16}{figure.caption.15}}
-\newlabel{fig:sparklines}{{14}{16}{VIP with sparkline representation of feature effects fit to the simulated Friedman data.\relax }{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces VIP with sparkline representation of feature effects fit to the simulated Friedman data.\relax }}{16}{figure.caption.16}}
+\newlabel{fig:sparklines}{{15}{16}{VIP with sparkline representation of feature effects fit to the simulated Friedman data.\relax }{figure.caption.16}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}Ames housing example}{16}{section.2.6}}
+\@writefile{brf}{\backcite{AmesHousing-pkg}{{16}{2.6}{section.2.6}}}
+\@writefile{brf}{\backcite{SuperLearner-pkg}{{16}{2.6}{section.2.6}}}
+\@writefile{brf}{\backcite{xgboost-pkg}{{16}{2.6}{section.2.6}}}
+\@writefile{brf}{\backcite{ranger-pkg}{{16}{2.6}{section.2.6}}}
+\@writefile{brf}{\backcite{glmnet-pkg}{{16}{2.6}{section.2.6}}}
+\@writefile{brf}{\backcite{kernlab-pkg}{{16}{2.6}{section.2.6}}}
 \citation{plyr-pkg}
 \citation{foreach-pkg}
 \citation{doParallel-pkg}
+\@writefile{brf}{\backcite{plyr-pkg}{{17}{2.6}{section.2.6}}}
+\@writefile{brf}{\backcite{foreach-pkg}{{17}{2.6}{section.2.6}}}
+\@writefile{brf}{\backcite{doParallel-pkg}{{17}{2.6}{section.2.6}}}
 \bibdata{pkg-vip}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces VIP with sparkline representation of feature effects for the top ten features from a Super Learner fit to the Ames housing data.\relax }}{18}{figure.caption.17}}
+\newlabel{fig:sparklines}{{16}{18}{VIP with sparkline representation of feature effects for the top ten features from a Super Learner fit to the Ames housing data.\relax }{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.7}Summary}{18}{section.2.7}}
 \bibcite{DALEX-pkg}{{1}{2018}{{Biecek}}{{}}}
 \bibcite{mlr-pkg}{{2}{2016}{{Bischl et~al.}}{{Bischl, Lang, Kotthoff, Schiffner, Richter, Studerus, Casalicchio, and Jones}}}
 \bibcite{bagging-breiman-1996}{{3}{1996}{{Breiman}}{{}}}
 \bibcite{random-breiman-2001}{{4}{2001}{{Breiman}}{{}}}
 \bibcite{classification-breiman-1984}{{5}{1984}{{Breiman et~al.}}{{Breiman, Friedman, and Charles J.~Stone}}}
-\@writefile{brf}{\backcite{plyr-pkg}{{17}{2.6}{section.2.6}}}
-\@writefile{brf}{\backcite{foreach-pkg}{{17}{2.6}{section.2.6}}}
-\@writefile{brf}{\backcite{doParallel-pkg}{{17}{2.6}{section.2.6}}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.7}Summary}{17}{section.2.7}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.8}Acknowledgments}{17}{section.2.8}}
 \bibcite{R6-pkg}{{6}{2019}{{Chang}}{{}}}
 \bibcite{xgboost-pkg}{{7}{2017}{{Chen et~al.}}{{Chen, He, and Benesty}}}
 \bibcite{robust-cleveland-1979}{{8}{1979}{{Cleveland}}{{}}}
@@ -166,8 +169,6 @@
 \bibcite{multivariate-friedman-1991}{{11}{1991}{{Friedman}}{{}}}
 \bibcite{interpreting-garson-1991}{{12}{1991}{{Garson}}{{}}}
 \bibcite{data-gedeon-1997}{{13}{1997}{{Gedeon}}{{}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces VIP with sparkline representation of feature effects for the top ten features from a Super Learner fit to the Ames housing data.\relax }}{18}{figure.caption.16}}
-\newlabel{fig:sparklines}{{15}{18}{VIP with sparkline representation of feature effects for the top ten features from a Super Learner fit to the Ames housing data.\relax }{figure.caption.16}{}}
 \bibcite{back-goh-1995}{{14}{1995}{{Goh}}{{}}}
 \bibcite{goldstein-peeking-2015}{{15}{2015}{{Goldstein et~al.}}{{Goldstein, Kapelner, Bleich, and Pitkin}}}
 \bibcite{vip-pkg}{{16}{2018}{{Greenwell and Boehmke}}{{}}}
@@ -176,13 +177,14 @@
 \bibcite{hastie-elements-2009}{{19}{2009}{{Hastie et~al.}}{{Hastie, Tibshirani, and Friedman}}}
 \bibcite{kernlab-pkg}{{20}{2004}{{Karatzoglou et~al.}}{{Karatzoglou, Smola, Hornik, and Zeileis}}}
 \bibcite{AmesHousing-pkg}{{21}{2017{a}}{{Kuhn}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.8}Acknowledgments}{19}{section.2.8}}
 \bibcite{caret-pkg}{{22}{2017{b}}{{Kuhn}}{{}}}
 \bibcite{applied-kuhn-2013}{{23}{2013}{{Kuhn and Johnson}}{{}}}
 \bibcite{mlbench-pkg}{{24}{2012}{{Leisch and Dimitriadou}}{{}}}
 \bibcite{earth-pkg}{{25}{2017}{{Milborrow}}{{}}}
 \bibcite{molnar-2019-iml}{{26}{2019}{{Molnar}}{{}}}
 \bibcite{iml-pkg}{{27}{2018}{{Molnar et~al.}}{{Molnar, Bischl, and Casalicchio}}}
-\bibcite{tibble-pkg}{{28}{2019}{{Müller and Wickham}}{{}}}
+\bibcite{tibble-pkg}{{28}{2019}{{M\IeC {\"u}ller and Wickham}}{{}}}
 \bibcite{accurate-olden-2004}{{29}{2004}{{Olden et~al.}}{{Olden, Joy, and Death}}}
 \bibcite{SuperLearner-pkg}{{30}{2018}{{Polley et~al.}}{{Polley, LeDell, Kennedy, and {van der Laan}}}}
 \bibcite{doParallel-pkg}{{31}{2015{a}}{{{Revolution Analytics} and Weston}}{{}}}

@@ -258,6 +258,14 @@ vip(nn, method = "permute",
   ggtitle("Using a random subset of training data")
 dev.off()
 
+# Figure X
+set.seed(8264)  # for reproducibility
+pdf("figures/vip-permute-nn-all.pdf", width = 7, height = 4.326)
+vip(nn, method = "permute", target = "y", metric = "rmse", nsim = 10,
+    all_permutations = TRUE, fill = "red", alpha = 0.5) +
+  ggtitle("Plotting all permutation scores")
+dev.off()
+
 
 # Use sparklines to characterize feature effects -------------------------------
 
