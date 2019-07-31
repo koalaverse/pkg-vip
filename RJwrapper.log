@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  11 JUL 2019 14:59
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.4.16)  30 JUL 2019 18:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -28,13 +28,21 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/fontenc.sty
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 105.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )) (./RJournal.sty
 Package: RJournal 2013/08/27 v0.13 RJournal package
 
@@ -75,10 +83,10 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: xetex.def on input line 99.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
 ))
 \Gin@req@height=\dimen105
 \Gin@req@width=\dimen106
@@ -115,21 +123,27 @@ ode.tex
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
-Driver file for pgf: pgfsys-pdftex.def
+Driver file for pgf: pgfsys-xetex.def
 
-(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
-ef
-File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+File: pgfsys-xetex.def 2014/07/09  (rcs-revision 1.11)
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+File: pgfsys-dvipdfmx.def 2014/07/09  (rcs-revision 1.14)
 
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
 df.def
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)
+\pgfsys@objnum=\count93
 )))
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count93
-\pgfsyssoftpath@bigbuffer@items=\count94
+\pgfsyssoftpath@smallbuffer@items=\count94
+\pgfsyssoftpath@bigbuffer@items=\count95
 )
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -140,9 +154,8 @@ Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Driver file: xetex.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
@@ -158,7 +171,7 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen115
-\pgfmath@count=\count95
+\pgfmath@count=\count96
 \pgfmath@box=\box27
 \pgfmath@toks=\toks24
 \pgfmath@stack@operand=\toks25
@@ -183,7 +196,7 @@ code.tex)
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
 erarithmetics.code.tex)))
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count96
+\c@pgfmathroundto@lastzeros=\count97
 ))
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
@@ -221,7 +234,7 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box28
 \pgf@hbox=\box29
 \pgf@layerbox@main=\box30
-\pgf@picture@serial@count=\count97
+\pgf@picture@serial@count=\count98
 )
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
@@ -256,7 +269,7 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 e.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen139
-\pgf@sys@shading@range@num=\count98
+\pgf@sys@shading@range@num=\count99
 )
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -319,7 +332,7 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count99
+\pgf@plot@mark@count=\count100
 \pgfplotmarksize=\dimen144
 )
 \tikz@lastx=\dimen145
@@ -332,19 +345,19 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@figbox@bg=\box34
 \tikz@tempbox=\box35
 \tikz@tempbox@bg=\box36
-\tikztreelevel=\count100
-\tikznumberofchildren=\count101
-\tikznumberofcurrentchild=\count102
-\tikz@fig@count=\count103
+\tikztreelevel=\count101
+\tikznumberofchildren=\count102
+\tikznumberofcurrentchild=\count103
+\tikz@fig@count=\count104
 
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count104
-\pgfmatrixcurrentcolumn=\count105
-\pgf@matrix@numberofcolumns=\count106
+\pgfmatrixcurrentrow=\count105
+\pgfmatrixcurrentcolumn=\count106
+\pgf@matrix@numberofcolumns=\count107
 )
-\tikz@expandcount=\count107
+\tikz@expandcount=\count108
 
 (/usr/local/texlive/2018/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
@@ -363,9 +376,9 @@ Package ifvtex Info: VTeX not detected.
 (/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count108
-\Gm@cntv=\count109
-\c@Gm@tempcnt=\count110
+\Gm@cnth=\count109
+\Gm@cntv=\count110
+\c@Gm@tempcnt=\count111
 \Gm@bindingoffset=\dimen151
 \Gm@wd@mp=\dimen152
 \Gm@odd@mp=\dimen153
@@ -392,18 +405,15 @@ s
 (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
 \MT@toks=\toks30
-\MT@count=\count111
+\MT@count=\count112
 LaTeX Info: Redefining \textls on input line 793.
 \MT@outer@kern=\dimen159
 LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
-\MT@listname@count=\count112
+\MT@listname@count=\count113
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/microtype-pdftex.def
-File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
-
-LaTeX Info: Redefining \lsstyle on input line 913.
-LaTeX Info: Redefining \lslig on input line 913.
-\MT@outer@space=\skip52
+(/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/microtype-xetex.def
+File: microtype-xetex.def 2018/01/14 v2.7a Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 256.
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
@@ -441,82 +451,7 @@ Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
-Now handling font encoding TS1 ...
-... processing UTF-8 mapping file for font encoding TS1
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1enc.dfu
-File: ts1enc.dfu 2018/04/05 v1.2c UTF-8 support for inputenc
-   defining Unicode char U+00A2 (decimal 162)
-   defining Unicode char U+00A3 (decimal 163)
-   defining Unicode char U+00A4 (decimal 164)
-   defining Unicode char U+00A5 (decimal 165)
-   defining Unicode char U+00A6 (decimal 166)
-   defining Unicode char U+00A7 (decimal 167)
-   defining Unicode char U+00A8 (decimal 168)
-   defining Unicode char U+00A9 (decimal 169)
-   defining Unicode char U+00AA (decimal 170)
-   defining Unicode char U+00AC (decimal 172)
-   defining Unicode char U+00AE (decimal 174)
-   defining Unicode char U+00AF (decimal 175)
-   defining Unicode char U+00B0 (decimal 176)
-   defining Unicode char U+00B1 (decimal 177)
-   defining Unicode char U+00B2 (decimal 178)
-   defining Unicode char U+00B3 (decimal 179)
-   defining Unicode char U+00B4 (decimal 180)
-   defining Unicode char U+00B5 (decimal 181)
-   defining Unicode char U+00B6 (decimal 182)
-   defining Unicode char U+00B7 (decimal 183)
-   defining Unicode char U+00B9 (decimal 185)
-   defining Unicode char U+00BA (decimal 186)
-   defining Unicode char U+00BC (decimal 188)
-   defining Unicode char U+00BD (decimal 189)
-   defining Unicode char U+00BE (decimal 190)
-   defining Unicode char U+00D7 (decimal 215)
-   defining Unicode char U+00F7 (decimal 247)
-   defining Unicode char U+0192 (decimal 402)
-   defining Unicode char U+02C7 (decimal 711)
-   defining Unicode char U+02D8 (decimal 728)
-   defining Unicode char U+02DD (decimal 733)
-   defining Unicode char U+0E3F (decimal 3647)
-   defining Unicode char U+2016 (decimal 8214)
-   defining Unicode char U+2020 (decimal 8224)
-   defining Unicode char U+2021 (decimal 8225)
-   defining Unicode char U+2022 (decimal 8226)
-   defining Unicode char U+2030 (decimal 8240)
-   defining Unicode char U+2031 (decimal 8241)
-   defining Unicode char U+203B (decimal 8251)
-   defining Unicode char U+203D (decimal 8253)
-   defining Unicode char U+2044 (decimal 8260)
-   defining Unicode char U+204E (decimal 8270)
-   defining Unicode char U+2052 (decimal 8274)
-   defining Unicode char U+20A1 (decimal 8353)
-   defining Unicode char U+20A4 (decimal 8356)
-   defining Unicode char U+20A6 (decimal 8358)
-   defining Unicode char U+20A9 (decimal 8361)
-   defining Unicode char U+20AB (decimal 8363)
-   defining Unicode char U+20AC (decimal 8364)
-   defining Unicode char U+20B1 (decimal 8369)
-   defining Unicode char U+2103 (decimal 8451)
-   defining Unicode char U+2116 (decimal 8470)
-   defining Unicode char U+2117 (decimal 8471)
-   defining Unicode char U+211E (decimal 8478)
-   defining Unicode char U+2120 (decimal 8480)
-   defining Unicode char U+2122 (decimal 8482)
-   defining Unicode char U+2126 (decimal 8486)
-   defining Unicode char U+2127 (decimal 8487)
-   defining Unicode char U+212E (decimal 8494)
-   defining Unicode char U+2190 (decimal 8592)
-   defining Unicode char U+2191 (decimal 8593)
-   defining Unicode char U+2192 (decimal 8594)
-   defining Unicode char U+2193 (decimal 8595)
-   defining Unicode char U+2329 (decimal 9001)
-   defining Unicode char U+232A (decimal 9002)
-   defining Unicode char U+2422 (decimal 9250)
-   defining Unicode char U+25E6 (decimal 9702)
-   defining Unicode char U+25EF (decimal 9711)
-   defining Unicode char U+266A (decimal 9834)
-   defining Unicode char U+FEFF (decimal 65279)
-))
+)
 LaTeX Info: Redefining \oldstylenums on input line 334.
 Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
 Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
@@ -589,10 +524,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@toks=\toks31
 \XKV@tempa@toks=\toks32
 )
-\XKV@depth=\count113
+\XKV@depth=\count114
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-\zifour@ocount=\count114
+\zifour@ocount=\count115
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
@@ -632,9 +567,10 @@ Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
+Package pdftexcmds Info: \pdfdraftmode not found.
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
 Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
@@ -658,15 +594,13 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen160
-\Hy@linkcounter=\count115
-\Hy@pagecounter=\count116
+\Hy@linkcounter=\count116
+\Hy@pagecounter=\count117
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
-Now handling font encoding PD1 ...
-... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count117
+\Hy@SavedSpaceFactor=\count118
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -687,10 +621,10 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 ))
-\c@Hy@tempcnt=\count118
+\c@Hy@tempcnt=\count119
 LaTeX Info: Redefining \url on input line 5115.
 \XeTeXLinkMargin=\dimen161
-\Fld@menulength=\count119
+\Fld@menulength=\count120
 \Field@Width=\dimen162
 \Fld@charsize=\dimen163
 Package hyperref Info: Hyper figures OFF on input line 6369.
@@ -702,17 +636,28 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6394.
 Package hyperref Info: PDF/A mode OFF on input line 6399.
 LaTeX Info: Redefining \ref on input line 6439.
 LaTeX Info: Redefining \pageref on input line 6443.
-\Hy@abspage=\count120
-\c@Item=\count121
-\c@Hfootnote=\count122
+\Hy@abspage=\count121
+\c@Item=\count122
+\c@Hfootnote=\count123
 )
-Package hyperref Info: Driver (autodetected): hpdftex.
+Package hyperref Info: Driver (autodetected): hxetex.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
-\Fld@listcount=\count123
-\c@bookmark@seq@number=\count124
-\Hy@SectionHShift=\skip53
+(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2018/02/06 v6.86b Hyperref driver for XeTeX
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2018/02/06 v6.86b Hyperref: PDF Unicode definition (HO)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/stringenc.sty
+Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box37
+\c@Hy@AnnotLevel=\count124
+\HyField@AnnotCount=\count125
+\Fld@listcount=\count126
+\c@bookmark@seq@number=\count127
+\Hy@SectionHShift=\skip52
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 62.
 
@@ -721,9 +666,9 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
-\ttl@box=\box37
-\beforetitleunit=\skip54
-\aftertitleunit=\skip55
+\ttl@box=\box38
+\beforetitleunit=\skip53
+\aftertitleunit=\skip54
 \ttl@plus=\dimen164
 \ttl@minus=\dimen165
 \ttl@toksa=\toks33
@@ -740,21 +685,21 @@ Package: placeins 2005/04/18  v 2.2
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip56
-\bibsep=\skip57
+\bibhang=\skip55
+\bibsep=\skip56
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count125
+\c@NAT@ctr=\count128
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count126
+\FV@CodeLineNo=\count129
 \FV@InFile=\read2
-\FV@TabBox=\box38
-\c@FancyVerbLine=\count127
-\FV@StepNumber=\count128
+\FV@TabBox=\box39
+\c@FancyVerbLine=\count130
+\FV@StepNumber=\count131
 \FV@OutFile=\write4
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/alltt.sty
@@ -782,7 +727,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen175
 \caption@hangindent=\dimen176
 )
-\c@ContinuedFloat=\count129
+\c@ContinuedFloat=\count132
 Package caption Info: hyperref package is loaded.
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/environ/environ.sty
@@ -795,7 +740,7 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
-\@mathmargin=\skip58
+\@mathmargin=\skip57
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -814,30 +759,30 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 Package: amsopn 2016/03/08 v2.02 operator names
 LaTeX Info: Redefining \operatorname on input line 43.
 )
-\inf@bad=\count130
+\inf@bad=\count133
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count131
-\leftroot@=\count132
+\uproot@=\count134
+\leftroot@=\count135
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count133
-\DOTSCASE@=\count134
+\classnum@=\count136
+\DOTSCASE@=\count137
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box39
-\strutbox@=\box40
+\Mathstrutbox@=\box40
+\strutbox@=\box41
 \big@size=\dimen179
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count135
-\c@MaxMatrixCols=\count136
+\macc@depth=\count138
+\c@MaxMatrixCols=\count139
 \dotsspace@=\muskip11
-\c@parentequation=\count137
-\dspbrk@lvl=\count138
+\c@parentequation=\count140
+\dspbrk@lvl=\count141
 \tag@help=\toks37
-\row@=\count139
-\column@=\count140
-\maxfields@=\count141
+\row@=\count142
+\column@=\count143
+\maxfields@=\count144
 \andhelp@=\toks38
 \eqnshift@=\dimen180
 \alignsep@=\dimen181
@@ -846,8 +791,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \totwidth@=\dimen184
 \lineht@=\dimen185
 \@envbody=\toks39
-\multlinegap=\skip59
-\multlinetaggap=\skip60
+\multlinegap=\skip58
+\multlinetaggap=\skip59
 \mathdisplay@stack=\toks40
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
@@ -858,12 +803,12 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/array.sty
 Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
 \col@sep=\dimen186
-\ar@mcellbox=\box41
+\ar@mcellbox=\box42
 \extrarowheight=\dimen187
 \NC@list=\toks41
-\extratabsurround=\skip61
-\backup@length=\skip62
-\ar@cellbox=\box42
+\extratabsurround=\skip60
+\backup@length=\skip61
+\ar@cellbox=\box43
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
@@ -877,42 +822,45 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \cmidrulesep=\dimen195
 \cmidrulekern=\dimen196
 \defaultaddspace=\dimen197
-\@cmidla=\count142
-\@cmidlb=\count143
+\@cmidla=\count145
+\@cmidlb=\count146
 \@aboverulesep=\dimen198
 \@belowrulesep=\dimen199
-\@thisruleclass=\count144
-\@lastruleclass=\count145
+\@thisruleclass=\count147
+\@lastruleclass=\count148
 \@thisrulewidth=\dimen256
 )
 (/usr/local/texlive/2018/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box43
-\UL@hyphenbox=\box44
-\UL@skip=\skip63
+\UL@box=\box44
+\UL@hyphenbox=\box45
+\UL@skip=\skip62
 \UL@hook=\toks42
 \UL@height=\dimen257
-\UL@pe=\count146
+\UL@pe=\count149
 \UL@pixel=\dimen258
-\ULC@box=\box45
+\ULC@box=\box46
 Package: ulem 2012/05/18
 \ULdepth=\dimen259
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count147
+\c@float@type=\count150
 \float@exts=\toks43
-\float@box=\box46
+\float@box=\box47
 \@float@everytoks=\toks44
-\@floatcapt=\box47
+\@floatcapt=\box48
 )
 \@float@every@algorithm=\toks45
-\c@algorithm=\count148
+\c@algorithm=\count151
  (./RJwrapper.aux
 
 LaTeX Warning: Label `fig:vip-earth' multiply defined.
 
 
 LaTeX Warning: Label `fig:vip-nn-mae' multiply defined.
+
+
+LaTeX Warning: Label `fig:vip-permute-nn-all' multiply defined.
 
 
 LaTeX Warning: Label `fig:sparklines' multiply defined.
@@ -928,6 +876,8 @@ LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
@@ -940,46 +890,18 @@ File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Try loading font information for T1+ppl on input line 14.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 ABD: EveryShipout initializing macros
-(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count149
-\scratchdimen=\dimen260
-\scratchbox=\box48
-\nofMPsegments=\count150
-\nofMParguments=\count151
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count152
-\MPscratchDim=\dimen261
-\MPnumerator=\count153
-\makeMPintoPDFobject=\count154
-\everyMPtoPDFconversion=\toks47
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-)
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
 *geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
+*geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
+* driver: xetex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -1013,15 +935,11 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Info: Redefining \microtypecontext on input line 14.
-Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
-Package microtype Info: Automatic font expansion enabled (level 2),
-(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
-Package microtype Info: Using default expansion set `basictext'.
 Package microtype Info: No adjustment of tracking.
-Package microtype Info: No adjustment of interword spacing.
-Package microtype Info: No adjustment of character kerning.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-ppl.cfg
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
@@ -1039,7 +957,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count155
+\c@section@level=\count152
 )
 LaTeX Info: Redefining \ref on input line 14.
 LaTeX Info: Redefining \pageref on input line 14.
@@ -1055,8 +973,14 @@ Package caption Info: End \AtBeginDocument code.
  (./pkg-vip.tex
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 5.
+
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
+File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
+
+)
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <9> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 9.
+Missing character: There is no ’ in font pplr8t!
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 13.
 LaTeX Font Info:    Try loading font information for T1+zi4 on input line 18.
@@ -1076,8 +1000,13 @@ Package microtype Info: Character `textendash ' is missing
 Package microtype Info: Character `textemdash ' is missing
 (microtype)             in font `T1/zi4/m/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 22.
 
+Overfull \hbox (6.63992pt too wide) in paragraph at lines 20--21
+\T1/zi4/m/n/9 feature_importance() \T1/ppl/m/n/9 func-tion. (Note that this fun
+c-tion re-cently re-placed the now dep-re-cated [][]\T1/ppl/b/n/9 DALEX[][]
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 22.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
@@ -1129,7 +1058,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.29405pt on input line 22.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 22.
- [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1
 
 ]
 LaTeX Font Info:    Try loading font information for TS1+ppl on input line 30.
@@ -1148,69 +1077,48 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+Missing character: There is no … in font t1-zi4r-0!
  [2]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 89.
-<figures/vi-plots.pdf, id=154, 650.43pt x 216.81pt>
+
+[3]
 File: figures/vi-plots.pdf Graphic file (type pdf)
 <use figures/vi-plots.pdf>
-Package pdftex.def Info: figures/vi-plots.pdf  used on input line 132.
-(pdftex.def)             Requested size: 398.33858pt x 132.78322pt.
+ [4]
+Overfull \hbox (0.79657pt too wide) in paragraph at lines 190--191
+[]\T1/ppl/m/n/9 Notice how the \T1/zi4/m/n/9 vi() \T1/ppl/m/n/9 func-tion al-wa
+ys re-turns a tib-ble with two columns: \T1/zi4/m/n/9 Variable \T1/ppl/m/n/9 an
+d \T1/zi4/m/n/9 Importance
+ []
 
-[3] [4 <./figures/vi-plots.pdf>]
-<figures/dot-plot.pdf, id=174, 505.89pt x 312.16624pt>
 File: figures/dot-plot.pdf Graphic file (type pdf)
 <use figures/dot-plot.pdf>
-Package pdftex.def Info: figures/dot-plot.pdf  used on input line 214.
-(pdftex.def)             Requested size: 398.33858pt x 245.80363pt.
- [5 <./figures/dot-plot.pdf>]
-<figures/vip-step.pdf, id=187, 505.89pt x 312.16624pt>
+[5]
+Missing character: There is no … in font t1-zi4r-0!
 File: figures/vip-step.pdf Graphic file (type pdf)
 <use figures/vip-step.pdf>
-Package pdftex.def Info: figures/vip-step.pdf  used on input line 253.
-(pdftex.def)             Requested size: 398.33858pt x 245.80363pt.
- [6 <./figures/vip-step.pdf>]
-<figures/vip-earth.pdf, id=205, 505.89pt x 312.16624pt>
+ [6]
 File: figures/vip-earth.pdf Graphic file (type pdf)
 <use figures/vip-earth.pdf>
-Package pdftex.def Info: figures/vip-earth.pdf  used on input line 291.
-(pdftex.def)             Requested size: 398.33858pt x 245.80363pt.
- [7 <./figures/vip-earth.pdf>]
-<figures/vip-model-nn.pdf, id=234, 505.89pt x 252.945pt>
+Missing character: There is no ’ in font pplr8t!
+Missing character: There is no ’ in font pplr8t!
+ [7]
 File: figures/vip-model-nn.pdf Graphic file (type pdf)
 <use figures/vip-model-nn.pdf>
-Package pdftex.def Info: figures/vip-model-nn.pdf  used on input line 318.
-(pdftex.def)             Requested size: 398.33858pt x 199.17207pt.
- [8 <./figures/vip-model-nn.pdf>]
-<figures/pdp-ppr.pdf, id=254, 1084.05pt x 361.35pt>
+ [8]
 File: figures/pdp-ppr.pdf Graphic file (type pdf)
 <use figures/pdp-ppr.pdf>
-Package pdftex.def Info: figures/pdp-ppr.pdf  used on input line 356.
-(pdftex.def)             Requested size: 398.33858pt x 132.77661pt.
-<figures/vip-ppr-nn.pdf, id=256, 505.89pt x 252.945pt>
 File: figures/vip-ppr-nn.pdf Graphic file (type pdf)
 <use figures/vip-ppr-nn.pdf>
-Package pdftex.def Info: figures/vip-ppr-nn.pdf  used on input line 380.
-(pdftex.def)             Requested size: 398.33858pt x 199.17207pt.
-
-[9 <./figures/pdp-ppr.pdf> <./figures/vip-ppr-nn.pdf>]
-<figures/ice-ppr.pdf, id=275, 1084.05pt x 361.35pt>
+ [9]
 File: figures/ice-ppr.pdf Graphic file (type pdf)
 <use figures/ice-ppr.pdf>
-Package pdftex.def Info: figures/ice-ppr.pdf  used on input line 407.
-(pdftex.def)             Requested size: 398.33858pt x 132.77661pt.
-<figures/vip-ice-ppr-nn.pdf, id=277, 505.89pt x 252.945pt>
 File: figures/vip-ice-ppr-nn.pdf Graphic file (type pdf)
 <use figures/vip-ice-ppr-nn.pdf>
-Package pdftex.def Info: figures/vip-ice-ppr-nn.pdf  used on input line 425.
-(pdftex.def)             Requested size: 398.33858pt x 199.17207pt.
- [10 <./figures/ice-ppr.pdf>]
-<figures/pdp-from-attr.pdf, id=296, 722.7pt x 361.35pt>
+ [10]
 File: figures/pdp-from-attr.pdf Graphic file (type pdf)
 <use figures/pdp-from-attr.pdf>
-Package pdftex.def Info: figures/pdp-from-attr.pdf  used on input line 461.
-(pdftex.def)             Requested size: 398.33858pt x 199.16766pt.
- [11 <./figures/vip-ice-ppr-nn.pdf> <./figures/pdp-from-attr.pdf>]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 10.42007pt on input line 474.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
@@ -1225,61 +1133,53 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 474.
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 482.
-<figures/vip-permute-ppr-nn.pdf, id=320, 505.89pt x 252.945pt>
+ [11]
 File: figures/vip-permute-ppr-nn.pdf Graphic file (type pdf)
 <use figures/vip-permute-ppr-nn.pdf>
-Package pdftex.def Info: figures/vip-permute-ppr-nn.pdf  used on input line 505
-.
-(pdftex.def)             Requested size: 398.33858pt x 199.17207pt.
- [12]
-[13 <./figures/vip-permute-ppr-nn.pdf>]
-<figures/vip-permute-nn-mae.pdf, id=350, 505.89pt x 312.16624pt>
+ [12] [13]
 File: figures/vip-permute-nn-mae.pdf Graphic file (type pdf)
 <use figures/vip-permute-nn-mae.pdf>
-Package pdftex.def Info: figures/vip-permute-nn-mae.pdf  used on input line 569
-.
-(pdftex.def)             Requested size: 398.33858pt x 245.80363pt.
-<figures/vip-permute-nn-sample.pdf, id=353, 505.89pt x 312.16624pt>
 File: figures/vip-permute-nn-sample.pdf Graphic file (type pdf)
 <use figures/vip-permute-nn-sample.pdf>
-Package pdftex.def Info: figures/vip-permute-nn-sample.pdf  used on input line 
-587.
-(pdftex.def)             Requested size: 398.33858pt x 245.80363pt.
-<figures/vip-permute-nn-all.pdf, id=355, 505.89pt x 312.16624pt>
 File: figures/vip-permute-nn-all.pdf Graphic file (type pdf)
 <use figures/vip-permute-nn-all.pdf>
-Package pdftex.def Info: figures/vip-permute-nn-all.pdf  used on input line 604
-.
-(pdftex.def)             Requested size: 398.33858pt x 245.80363pt.
- [14 <./figures/vip-permute-nn-mae.pdf>] [15 <./figures/vip-permute-nn-sample.p
-df> <./figures/vip-permute-nn-all.pdf>]
-<figures/sparklines.png, id=390, 798.985pt x 959.585pt>
-File: figures/sparklines.png Graphic file (type png)
-<use figures/sparklines.png>
-Package pdftex.def Info: figures/sparklines.png  used on input line 626.
-(pdftex.def)             Requested size: 398.33858pt x 478.41496pt.
+ [14]
 
-[16 <./figures/sparklines.png>] [17]
-<figures/ames-sparklines.png, id=443, 959.585pt x 959.585pt>
-File: figures/ames-sparklines.png Graphic file (type png)
-<use figures/ames-sparklines.png>
-Package pdftex.def Info: figures/ames-sparklines.png  used on input line 707.
-(pdftex.def)             Requested size: 398.33858pt x 398.3375pt.
- (./RJwrapper.bbl (./RJwrapper.brf)
+LaTeX Warning: Reference `fig:benchmark' on page 15 undefined on input line 616
+.
+
+[15]
+File: figures/benchmark.pdf Graphic file (type pdf)
+<use figures/benchmark.pdf>
+File: figures/sparklines.png Graphic file (type bmp)
+<figures/sparklines.png>
+ [16] [17]
+File: figures/ames-sparklines.png Graphic file (type bmp)
+<figures/ames-sparklines.png>
+Missing character: There is no ’ in font pplr8t!
+ [18] (./RJwrapper.bbl (./RJwrapper.brf)
 \tf@brf=\write6
 \openout6 = `RJwrapper.brf'.
 
+ [19]
+Underfull \hbox (badness 1314) in paragraph at lines 50--50
+[]\T1/ppl/m/n/9 L. Breiman, J. Fried-man, and R. A. O. Charles J. Stone.  \T1/p
+pl/m/it/9 Clas-si-fi-ca-tion and Re-gres-sion Trees\T1/ppl/m/n/9 .
+ []
 
-[18 <./figures/ames-sparklines.png>] [19])) [20] [21]
+[20])) [21]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 28.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 28.
  (./RJwrapper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 28.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 28.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 28.
 Package rerunfilecheck Info: File `RJwrapper.out' has not changed.
-(rerunfilecheck)             Checksum: 36995401740B9886C9FBB4F454A0A5C3;1049.
+(rerunfilecheck)             Checksum: 515A58197CF0DCF3A738DFFF337B4173.
 Package rerunfilecheck Info: File `RJwrapper.brf' has not changed.
-(rerunfilecheck)             Checksum: 4C0FDE38AAFB8594FC96AE7E672618EB;2350.
+(rerunfilecheck)             Checksum: AF04740E9DDBFE55A17A92F856257CFA.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1287,31 +1187,12 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 28.
  ) 
 Here is how much of TeX's memory you used:
- 22409 strings out of 492649
- 403162 string characters out of 6129622
- 506768 words of memory out of 5000000
- 25494 multiletter control sequences out of 15000+600000
- 62685 words of font info for 256 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 62i,11n,94p,1561b,648s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
-exlive/2018/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}{/usr/local/texli
-ve/2018/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}</usr/local/texlive/
-2018/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/
-texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/te
-xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
-live/2018/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/
-2018/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2018
-/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-
-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2018/texmf-dist/f
-onts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
-pe1/urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw
-/palatino/uplri8a.pfb>
-Output written on RJwrapper.pdf (21 pages, 1468383 bytes).
-PDF statistics:
- 621 PDF objects out of 1000 (max. 8388607)
- 549 compressed objects within 6 object streams
- 101 named destinations out of 1000 (max. 500000)
- 43221 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 24648 strings out of 492970
+ 433070 string characters out of 6133938
+ 519171 words of memory out of 5000000
+ 28201 multiletter control sequences out of 15000+600000
+ 37920 words of font info for 87 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 62i,12n,94p,1561b,663s stack positions out of 5000i,500n,10000p,200000b,80000s
 
+Output written on RJwrapper.pdf (21 pages).

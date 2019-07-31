@@ -1,4 +1,4 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{40}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -11,6 +11,13 @@ P.~Biecek.
 \newblock \emph{Journal of Machine Learning Research}, 19\penalty0
   (84):\penalty0 1--5, 2018.
 \newblock URL \url{http://jmlr.org/papers/v19/18-416.html}.
+
+\bibitem[Biecek(2019)]{ingredients-pkg}
+P.~Biecek.
+\newblock \emph{ingredients: Effects and Importances of Model Ingredients},
+  2019.
+\newblock URL \url{https://CRAN.R-project.org/package=ingredients}.
+\newblock R package version 0.3.3.
 
 \bibitem[Bischl et~al.(2016)Bischl, Lang, Kotthoff, Schiffner, Richter,
   Studerus, Casalicchio, and Jones]{mlr-pkg}
@@ -168,6 +175,12 @@ F.~Leisch and E.~Dimitriadou.
 \newblock \emph{mlbench: Machine Learning Benchmark Problems}, 2012.
 \newblock URL \url{https://CRAN.R-project.org/package=mlbench}.
 \newblock R package version 2.1-1.
+
+\bibitem[Mersmann(2018)]{microbenchmark-pkg}
+O.~Mersmann.
+\newblock \emph{microbenchmark: Accurate Timing Functions}, 2018.
+\newblock URL \url{https://CRAN.R-project.org/package=microbenchmark}.
+\newblock R package version 1.4-6.
 
 \bibitem[Milborrow(2017)]{earth-pkg}
 S.~Milborrow.

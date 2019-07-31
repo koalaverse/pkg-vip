@@ -5,7 +5,7 @@
 \maketitle
 
 \abstract{
-In the era of "big data", it is becoming more of a challenge to not only build state-of-the-art predictive models, but also gain an understanding of what’s really going on in the data. For example, it is often of interest to know which, if any, of the predictors in a fitted model are relatively influential on the predicted outcome. Some modern algorithms---like random forests (RFs) and gradient boosted decision trees (GBMs)---have a natural way of quantifying the importance or relative influence of each feature. Other algorithms—like naive Bayes classifiers and support vector machines—are not capable of doing so and \dfn{model-agnostic approaches} are generally used to measure each predictor’s importance. Enter \pkg{vip}, an R package for constructing variable importance scores/plots for many types of supervised learning algorithms using model-specific and novel model-agnostic approaches. We'll also discuss a novel way to display both feature importance and feature effects together using sparklines.
+In the era of "big data", it is becoming more of a challenge to not only build state-of-the-art predictive models, but also gain an understanding of what's really going on in the data. For example, it is often of interest to know which, if any, of the predictors in a fitted model are relatively influential on the predicted outcome. Some modern algorithms---like random forests (RFs) and gradient boosted decision trees (GBMs)---have a natural way of quantifying the importance or relative influence of each feature. Other algorithms---like naive Bayes classifiers and support vector machines---are not capable of doing so and \dfn{model-agnostic approaches} are generally used to measure each predictor’s importance. Enter \pkg{vip}, an R package for constructing variable importance scores/plots for many types of supervised learning algorithms using model-specific and novel model-agnostic approaches. We'll also discuss a novel way to display both feature importance and feature effects together using \dfn{sparklines}, a very small line chart conveying the general shape or variation in some feature that can be directly embedded in text or tables.
 }
 
 
@@ -17,7 +17,7 @@ Too often machine learning (ML) models are summarized using a single metric (e.g
 
 VI scores and VIPs can be constructed for general ML models using a number of packages. The \CRANpkg{iml} package \citep{iml-pkg} provides the \code{FeatureImp()} function which computes feature importance for general prediction models using the permutation approach (discussed later). It is written in \CRANpkg{R6} \citep{R6-pkg} and allows the user to specify a generic loss function or select from a pre-defined list (e.g., \code{loss = "mse"} for mean squared error). It also allows the user to specify whether importance is measures as the difference or as the ratio of the original model error and the model error after permutation. The user can also specify the number of repetitions used when permuting each feature to help stabilize the variability in the procedure.
 
-The \CRANpkg{DALEX} package \citep{DALEX-pkg} also provides permutation-based VI scores through the \code{variable\_importance()} function. Similar to \code{iml::FeatureImp()}, this function allows the user to specify a loss function and how the importance scores are computed (e.g., using the difference or ratio). It also provides an option to sample the training data before shuffling the data to compute importance (the default is to use \code{n\_sample = 1000}). This can help speed up computation.
+The \CRANpkg{ingredients} package \citep{ingredients-pkg} also provides permutation-based VI scores through the \code{feature\_importance()} function. (Note that this function recently replaced the now deprecated \CRANpkg{DALEX} function \code{variable\_importance()} \citep{DALEX-pkg}.) Similar to \code{iml::FeatureImp()}, this function allows the user to specify a loss function and how the importance scores are computed (e.g., using the difference or ratio). It also provides an option to sample the training data before shuffling the data to compute importance (the default is to use \code{n\_sample = 1000}). This can help speed up computation.
 
 The \CRANpkg{caret} package \citep{caret-pkg} includes a general \code{varImp()} function for computing model-specific and filter-based VI scores. Filter-based approaches, which are described in \citet{applied-kuhn-2013}, do not make use of the fitted model to measure VI. They also do not take into account the other predictors in the model. For regression problems, a popular approach to measuring the VI of a numeric predictor $x$ is to first fit a flexible nonparametric model between $x$ and the target $Y$; for example, the locally-weighted polynomial regression (LOWESS) method developed by \citet{robust-cleveland-1979}. From this fit, a pseudo-$R^2$ measure can be obtained from the resulting residuals and used as a measure of VI. For categorical predictors, a different method based on standard statistical tests (e.g., $t$-tests and ANOVAs) can be employed; see \citet{applied-kuhn-2013} for details. For classification problems, an area under the ROC curve (AUC) statistic can be used to quantify predictor importance. The AUC statistic is computed by using the predictor $x$ as input to the ROC curve. If $x$ can reasonably separate the classes of $Y$, that is a clear indicator that $x$ is an important predictor (in terms of class separation) and this is captured in the corresponding AUC statistic. For problems with more than two classes, extensions of the ROC curve or a one-vs-all approach can be used.
 
@@ -603,6 +603,30 @@ vip(nn, method = "permute", target = "y", metric = "rmse",
   \centering
   \includegraphics[width=1\linewidth]{figures/vip-permute-nn-all}
   \caption{Permutation-based feature importance for the NN model fit to the simulated Friedman data. In this example, all the permutation importance scores (points) are displayed for each feature along with their average (bars).}
+  \label{fig:vip-permute-nn-all}
+\end{figure}
+
+
+% ------------------------------------------------------------------------------
+\subsection{Benchmarks}
+% ------------------------------------------------------------------------------
+
+In this section, we compare the performance of three implementations of permutation-based VI scores: \code{iml::FeatureImp()}, \code{ingredients::feature\_importance()}, and \code{vip::vi()}.
+
+We simulated 10,000 training observations from the Friedman 1 benchmark problem and trained a random forest using the \pkg{ranger} package. For each implementation, we computed permutation-based VI scores 100 times using the \CRANpkg{microbenchmark} package \citep{microbenchmark-pkg}. For this benchmark we did not use any of the parallel processing capability available in the \pkg{iml} and \pkg{vip} implementations. The results from \pkg{microbenchmark} are displayed in Figure~\ref{fig:benchmark} and summarized in the output below. In this case, the \pkg{vip} package was the most efficient, followed closely by \pkg{ingredients}. It should be noted, however, that the implementations in \pkg{vip} and \pkg{iml} can be parallelized. To the best of our knowledge, this is not the case for \pkg{ingredients}.
+
+\begin{example}
+Unit: seconds
+        expr       min        lq      mean    median        uq      max neval cld
+ ingredients  4.960832  5.658127  8.103375  5.853441  8.034572 61.61415   100  b 
+         iml 10.636616 11.742197 14.760306 12.180391 12.961056 35.28671   100   c
+         vip  4.076012  4.729765  5.968943  4.838916  5.745905 20.04089   100 a
+\end{example}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=1\linewidth]{figures/benchmark}
+  \caption{Violin plots comparing the computation time from three different implementations of permutation-based VI scores across 100 simulations.}
   \label{fig:vip-permute-nn-all}
 \end{figure}
 
