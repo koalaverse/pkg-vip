@@ -24,7 +24,7 @@
 \backcite {back-goh-1995}{{7}{2.3.3}{subsection.2.3.3}}
 \backcite {accurate-olden-2004}{{7}{2.3.3}{subsection.2.3.3}}
 \backcite {data-gedeon-1997}{{7}{2.3.3}{subsection.2.3.3}}
-\backcite {nnet-pkg}{{7}{2.3.3}{subsection.2.3.3}}
+\backcite {nnet-pkg}{{8}{2.3.3}{subsection.2.3.3}}
 \backcite {greenwell-simple-2018}{{8}{2.4}{section.2.4}}
 \backcite {greenwell-pdp-2017}{{8}{2.4.1}{subsection.2.4.1}}
 \backcite {greenwell-pdp-2017}{{8}{2.4.1}{subsection.2.4.1}}
@@ -33,9 +33,9 @@
 \backcite {fisher-model-2018}{{11}{2.4.3}{subsection.2.4.3}}
 \backcite {molnar-2019-iml}{{12}{2.4.3}{algorithm.1}}
 \backcite {molnar-2019-iml}{{14}{2.4.3}{figure.caption.13}}
-\backcite {microbenchmark-pkg}{{15}{2.4.4}{subsection.2.4.4}}
+\backcite {microbenchmark-pkg}{{16}{2.4.4}{subsection.2.4.4}}
 \backcite {DT-pkg}{{16}{2.5}{section.2.5}}
-\backcite {AmesHousing-pkg}{{16}{2.6}{section.2.6}}
+\backcite {AmesHousing-pkg}{{17}{2.6}{section.2.6}}
 \backcite {SuperLearner-pkg}{{17}{2.6}{section.2.6}}
 \backcite {xgboost-pkg}{{17}{2.6}{section.2.6}}
 \backcite {ranger-pkg}{{17}{2.6}{section.2.6}}

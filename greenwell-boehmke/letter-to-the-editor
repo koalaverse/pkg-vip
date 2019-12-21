@@ -1,0 +1,7 @@
+To Whom It May Concern,
+
+We are submitting the manuscript "Variable Importance Plots: An Introduction to the vip Package" for consideration for publication in The R Journal. While this technically falls into the add-on packages category, the manuscript provides an in-depth background on both common and novel variable importance techniques and how they can be computed using our package. We also benchmark popular alternative add-on packages and show how some of these techniques can be applied in more complicated settings, such as stacked ensembles, and how computation time can be managed via parallel processing. We also describe a novel way to combine both feature importance and feature effects in a single interactive table.
+
+Thank you for your consideration,
+
+Brandon Greenwell & Brad Boehmke
